@@ -1,76 +1,185 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
     <style>
     body {
-        background: rgb(125, 198, 205);
-        color: rgb(45, 45, 45);
-        padding: 10px;
-        font-family: arial;
+        color: blue;
     }
-    header {
-        font-size: 1.5em;
+
+    h1 {
+        text-align: center;
+        color: blue;
+        text-shadow: 2px 1px black;
+    }
+    
+    p   {
+        text-shadow: 2px 1px black;
+    }
+    
+    p2  {
+        text-align: center;
+        color: blue;
+        text-shadow: 1px 1px black;
+    }
+    
+    section {
+        text-align: center;
+        color: blue;
+    }
+    
+    li {
+        float: inherit;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: justify;
+        padding: 5px 15px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: grey;
+    }
+    body {
+        color: white;
+        background-color: blue;
+        padding: 15px;
+        margin: 20px;
+        font-family: 'Aldrich';
+        font-size: 12px;
+        text-align: justify;
+    }
+    header4 {
+        font-size: 4em;
+        text-shadow: 4px 5px black;
         font-weight: bold;
+        text-align: center;
+        width: auto;
     }
     #all-contents {
-        max-width: 800px;
-        margin: auto;
+        max-width: 1987px;
+        text-align: center;
+        margin: justify;
+    }
+    html {
+        background: url(http://textures.world/wp-content/uploads/2018/10/04-Isometric-Cube-Pattern-Background-Texture-copy.jpg) no-repeat center fixed; 
+        background-size: cover;
     }
 
     /* navigation menu */
-    nav {
-        background: rgb(239, 80, 41);
-        margin: 0 auto;
-        display: flex;
-        padding: 10px;
+    .nav {
+        background: rgb(0, 0, 255);
+        display: table-row-group;
+        padding: 0;
     }
     nav header {
-        display: flex;
-        align-items: center;
+        display: table-row;
+        padding: 0;
         color: rgb(255, 255, 255);
-        flex: 1;
     }
+    
+    /* Style The Dropdown Button */
+    .dropbtn {
+        background-color: inherit;
+        color: grey;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+    position: inherit;
+    display: inline-table;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+    display: none;
+    position: inherit;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+    color: inherit;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: grey}
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+    display: inline;
+    }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+    }
+
     nav ul {
-        list-style-image: none;
+        color: white;
+        background-color: rgb(0, 0, 255);
+        list-style-image: inherit;
     }
     nav li {
         display: inline-block;
-        padding: 0 10px;
+        padding: 0 125px;
     }
     nav a {
         text-decoration: none;
-        color: #fff;
+        color: white;
     }
 
     /* main container area beneath menu */
     main {
-        background: rgb(245, 238, 219);
-        display: flex;
+        background: rgb(255, 255, 255);
+        display: -webkit-box;
     }
     .sidebar {
-        margin-right: 25px;
-        padding: 10px;
+        margin-right: 100px;
+        padding: 200px 0 0 400px;
     }
     .sidebar img {
-        width: 200px;
+        width: 100px;
     }
     .content {
-        flex: 1;
-        padding: 15px;
+        padding: 0;
     }
     .interests header {
-        font-size: 1.25em;
+        text-align: center;
+        font-size: 2em;
     }
     </style>
-        <title>Paralolz.net (ALPHA)</title>
+        <title>ParaLolz Studios, Ltd.</title>
     </head>
     <body>
         <div id="all-contents">
             <nav>
-                <header>ParaLolz Studios, Ltd.</header>
+                <header4>ParaLolz Studios, Ltd.</header4>
+                <p class="text">
+                    The Medium Is The Message</p>
                 <ul>
                     <li><a href="index.html">HOME</a></li>
+                    <div class="dropdown">
                     <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <div class="dropdown-content">
+                        <a href="#">NEONEXUS</a>
+                        <a href="#">PlatformWave</a>
+                        <a href="#">More About Me</a>
+                        </div>
+                    </div>
                     <li><a href="artgallery.html">ART GALLERY</a></li>
                     <li><a href="auvi.html">AUVI</a></li>
                     <li><a href="forumsfaq.html">FORUMS/FAQ's</a></li>
@@ -79,29 +188,29 @@
             </nav>
             <main>
                 <div class="sidebar">
-                    
+                
                 </div>
                 
                 <div>
-                    <a href="https://www.youtube.com/watch?v=8SWjeEb5GIA">Enter: Nextcentury</a>
                     
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Necker_cube_and_impossible_cube.svg/402px-Necker_cube_and_impossible_cube.svg.png">
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddfy9zy-1de1c407-1c4f-48f2-9afe-68971d273eca.png/v1/fill/w_400,h_162,strp/paralolz_studios__ltd__banner_logo_1__by_paralolzltd_art_ddfy9zy-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTYyIiwicGF0aCI6IlwvZlwvYTQ0MzcyOGEtZjM4ZS00NmFjLTk5YTUtYTMyZDI3NjQ1NzU5XC9kZGZ5OXp5LTFkZTFjNDA3LTFjNGYtNDhmMi05YWZlLTY4OTcxZDI3M2VjYS5wbmciLCJ3aWR0aCI6Ijw9NDAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.hgeob0Xtv7n5JtgAdBANg3I7ITigTg8h1S6zkC7x1yo">
                 </div>
                 <div class="content">
                     <h1 class="text">
-                        Clark
+                        QWERTY4
                     </h1>
-                    <p class="text">
-                        Student @ DSHS
-                    </p>
-                    <section class="Interests">
+                    <p2 class="text">
+                        Webwave Vaporpunk Artist
+                    </p2>
+                    <section class="interests">
                         <header>Interests</header>
                         <ul>
                             <li>Web Design</li>
                             <li>Artistic Storytelling</li>
                             <li>Retrofuturism & Vaporwave</li>
                         </ul>
-                    </section>    
+                <a href="https://www.youtube.com/watch?v=8SWjeEb5GIA&t=1250s">ALBUM OF THE WEEK: Nextcentury</a>
+                    </section>
                 </div>
             </main>
         </div>    
