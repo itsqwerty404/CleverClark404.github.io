@@ -3,198 +3,331 @@
     <head>
     <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
         <style type="text/css">
+            /* Style the header */
+            .header {
+                background-color: blue;
+                padding: 20px;
+                text-align: center;
+            }
+            
             body {
-                color: rgb(255, 255, 255);
-                padding: 10px;
-                font-family: 'Aldrich';
-                font-size: 12px;
+                color: blue;
             }
-            header {
-                font-size: 2.5em;
-                color: white;
-                font-weight: bold;
-            }
+        
             h1 {
-                margin: 10px;
-                color: white;
+                text-align: center;
+                color: blue;
+                text-shadow: 2px 1px black;
+            }
+            
+            p   {
+                text-shadow: 2px 1px black;
+            }
+            
+            p2  {
+                text-align: center;
+                color: blue;
+                text-shadow: 1px 1px black;
+            }
+            
+            section {
+                text-align: center;
+                color: blue;
             }
             
             li {
                 float: inherit;
             }
-
+        
             li a {
                 display: block;
                 color: white;
                 text-align: justify;
-                padding: 5px 15px;
+                padding: 10px 55px;
                 text-decoration: none;
             }
-    
-            section {
-                text-align: center;
-                color: white;
-            }
-
+        
             li a:hover {
                 background-color: grey;
             }
-            
-            .all-contents {
+            body {
+                color: white;
+                background-color: blue;
+                padding: 15px;
+                margin: 20px;
+                font-family: 'Aldrich';
+                font-size: 16px;
+                text-align: justify;
+            }
+            header4 {
+                font-size: 4em;
+                text-shadow: 4px 5px black;
+                font-weight: bold;
+                text-align: center;
+                width: auto;
+            }
+            #all-contents {
                 max-width: 1987px;
                 text-align: center;
                 margin: justify;
             }
-            html { 
+            html {
                 background: url(http://textures.world/wp-content/uploads/2018/10/04-Isometric-Cube-Pattern-Background-Texture-copy.jpg) no-repeat center fixed; 
                 background-size: cover;
-            }    
+            }
+        
             /* navigation menu */
-            nav {
+            .nav {
                 background: rgb(0, 0, 255);
-                margin: inherit;
-                width: 100%;
-                display: table-row;
-                padding: inherit;
+                display: table-row-group;
+                padding: 0;
+                text-align: center;
             }
             nav header {
                 display: table-row;
-                margin: inherit;
-                color: white;
-                flex: 1;
+                padding: 0;
+                color: rgb(255, 255, 255);
+            }
+            
+            #navlist {
+                position: relative;
+            }
+        
+            #navlist li {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                position: absolute;
+                top: 0;
+            }
+        
+            #navlist li, #navlist a {
+              height: 44px;
+              display: block;
+            }
+            
+            #home {
+              left: 0;
+              width: 80px;
+              background: url('img_navsprites.gif') 0 0;
+            }
+            
+            #prev {
+              left: 63px;
+              width: 43px;
+              background: url('img_navsprites.gif') -47px 0;
+            }
+            
+            #next {
+              left: 129px;
+              width: 43px;
+              background: url('img_navsprites.gif') -91px 0;
             }
             
             /* Style The Dropdown Button */
             .dropbtn {
-                background-color: inherit;
-                color: grey;
-                padding: 16px;
+                background: grey;
+                color: white;
+                padding: 0;
+                font-family: 'Aldrich';
                 font-size: 16px;
                 border: none;
                 cursor: pointer;
             }
-
+            
+            .dropbtn a:hover {
+              color: #505050;  
+            }
+        
             /* The container <div> - needed to position the dropdown content */
             .dropdown {
                 position: inherit;
+                text-align: center;
                 display: inline-table;
             }
-
+        
             /* Dropdown Content (Hidden by Default) */
             .dropdown-content {
                 display: none;
-                position: inherit;
-                background-color: #f9f9f9;
-                min-width: 160px;
-                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+                position: fixed;
+                background: grey;
+                min-width: 195px;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0);
                 z-index: 1;
             }
-
+        
             /* Links inside the dropdown */
             .dropdown-content a {
-                color: inherit;
-                padding: 12px 16px;
+                color: white;
+                background: grey;
+                padding: inherit;
                 text-decoration: none;
                 display: block;
             }
-
+        
             /* Change color of dropdown links on hover */
-            .dropdown-content a:hover {background-color: grey}
-
+            .dropdown-content a:hover {
+                background: grey;
+                color: #505050;
+            }
+        
             /* Show the dropdown menu on hover */
             .dropdown:hover .dropdown-content {
-                display: inline;
+                display: table;
+                padding: 10px 5px 10px 5px;
             }
-
+        
             /* Change the background color of the dropdown button when the dropdown content is shown */
-            .dropdown:hover .dropbtn {
-                background-color: red;
+            .dropdown:hover .dropbtn a:hover {
+                background-color: grey;
             }
-            
+        
             nav ul {
+                color: white;
+                background: grey;
                 list-style-image: inherit;
+                padding: inherit;
             }
             nav li {
                 display: inline-block;
-                font-size: 15px;
-                margin: center;
-                padding: 25px;
+                padding: 0;
             }
             nav a {
                 text-decoration: none;
-                color: #fff;
+                color: white;
             }
-    
+        
             /* main container area beneath menu */
             main {
-                background: rgb(0, 0, 255);
-                display: flex;
+                background: rgb(255, 255, 255);
+                display: -webkit-box;
+            }
+            .sidebar {
+                margin-right: 100px;
+                padding: 0px;
+            }
+            .sidebar img {
+                width: 100px;
             }
             .content {
-                flex: 1;
-                padding: 15px;
+                list-style-image: none;
+                font-color: blue;
+                background: none;
+                padding: 0;
+            }
+            .interests header {
+                text-align: center;
+                font-size: 2em;
+            }
+            
+            ul {
+                list-style-image: none;
+                font-color: blue;
+                text-align: center;
             }
             
             /* portfolio styles */
             #portfolio {
-                list-style-type: none;
+                background: white;
+                color: blue;
+                list-style-image: none;
                 padding-left: 0;
             }
             
             #portfolio li {
-                padding: 100px;
-                border-radius: 100px;
-                margin-bottom: 100px;
+                font-color: blue;
+                padding: 0px;
+                border-radius: 0px;
+                margin-bottom: 0px;
             }
             
             #portfolio li:hover {
-                background: #eee;
+                background: forestgreen;
             } 
             
             #portfolio a {
+                font-color: blue;
                 text-decoration: none;
                 color: blue;
             }
+            
+            /* Footer */
+            .footer {
+                padding: 0;
+                font-size: 10px;
+                font-color: blue;
+                text-align: center;
+                background: blue;
+            }    
         </style>
             <title>ParaLolz Studios, Ltd.</title>
     </head>
     <body>
-    <title>ParaLolz Studios, Ltd.</title>
-      <div id="all-contents">
-        <nav>
-            <header>ParaLolz Studios, Ltd.</header>
-            <ul>
-                <li><a href="index.html">HOME</a>
-                <li><a href="portfolio.html">PORTFOLIO</a></li>
-                <li><a href="artgallery.html">ART GALLERY</a></li>
-                <li><a href="auvi.html">AUVI</a></li>
-                <li><a href="forumsfaq.html">FORUMS/FAQ's</a></li>
-                <li><a href="contactinfo.html">CONTACT INFO</a></li>
-            </ul>
-        </nav>
-    </div>
-        <nav>
-            
-        </nav>
-        <main>
-            <div class="content">
-                <h1>Portfolio</h1>
-                <ul id="portfolio">
+        <div id="all-contents">
+            <nav>
+                <header4>ParaLolz Studios, Ltd.</header4>
+                <p class="text">
+                    <p>The Medium Is The Message</p>
+                <ul>
+                    <button class="dropbtn">
+                    <div class="dropdown">
+                        <li><a href="index.html">HOME</a></li>
+                    <div class="dropdown-content">
+                            <a href="#">TOP! Featured</a>
+                                <a href="#">ChronoNEWS</a>
+                                <a href="#">About ParaLolz</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                        <li><a href="portfolio.html">PORTFOLIO</a></li>
+                            <div class="dropdown-content">
+                            <a href="#">PlatformWave</a>
+                            <a href="#">More About Me</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <li><a href="artgallery.html">ART GALLERY</a></li>
+                            <div class="dropdown-content">  
+                            <a href="neonexus.html">NEONEXUS</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <li><a href="auvi.html">AUVI</a></li>
+                            <div class="dropdown-content">
+                            <a href="#">VDO</a>
+                            <a href="#">FONiX</a>
+                            <a href="#">MediaShare.ware</a>
+                        </div>
+                    </div>
+                    <li><a href="forumsfaq.html">FORUMS/FAQ's</a></li>
+                    <li><a href="contactinfo.html">CONTACT INFO</a></li>
+                    
+                    </button>
                 </ul>
-            </div>
-            <div class="content">
-                <header>STUFF I WORKED ON:</header>
-            <ul>
-                <li>MUSIC</li>
-                <li>ALBUM ART/ALBUM SONGS</li>
-                <li>CONCEPT ART FOR MY WEBCOMIC</li>
-                <li>VIDEOS</li>
-                <li>SERVERS</li>
-                <li>MUSIC</li>
-            </div>
-            </ul>
+            </nav>
+            <main>
+                <div class="sidebar">
+                    <h1>PORTFOLIO</h1>
+                </div>
+                <div class="content">
+                <ul id="portfolio">
+                    <header>STUFF I WORKED ON:</header>
+                <ul>
+                    <li>MUSIC</li>
+                    <li>ALBUM ART/ALBUM SONGS</li>
+                    <li>CONCEPT ART FOR MY WEBCOMIC</li>
+                    <li>VIDEOS</li>
+                    <li>SERVERS</li>
+                    <li>DRAWING & STUFF RELATED TO DRAWING</li>
+                </ul>
+                </ul>
+            </div>        
         </main>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script id="portfolioScript">$(document).ready(function() {$.getJSON('projects/projects.json').then(function(data) { data.projects.forEach(function(project){ $('#portfolio').append('<li><a href="projects/' + project.name + '/">' + project.title + ' : ' + project.description + '</a></li>'); }); }); });</script>
+    <!-- Footer -->
+        <div class="footer">
+            <h2>Copyright 2019 | All Rights Reserved | Paralolz Studios, Ltd.</h2>
+        </div>
     </body>
 </html>
