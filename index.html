@@ -21,7 +21,7 @@
     h1 {
         text-align: center;
         color: blue;
-        text-shadow: 4px 4px limegreen;
+        text-shadow: 2px 2px black;
     }
     
     h2 {
@@ -47,11 +47,11 @@
     
     p2  {
         text-align: center;
-        color: blue;
+        color: white;
         text-shadow: none;
     }
     
-    div.fontstr {
+    .fontstr {
         font-stretch: ultra-condensed
     }
     
@@ -118,13 +118,13 @@
     }
     
     p3 pos  {
-        text-align: center; 
+        text-align: center;
     }
 
     #all-contents {
         max-width: 1987px;
         text-align: center;
-        margin: justify;
+        margin: auto;
     }
     html {
         background: url(http://textures.world/wp-content/uploads/2018/10/04-Isometric-Cube-Pattern-Background-Texture-copy.jpg) no-repeat center fixed; 
@@ -206,7 +206,7 @@
         color: white;
         background: grey;
         list-style-image: inherit;
-        padding: inherit;
+        padding: 0;
     }
     nav li {
         display: inline-block;
@@ -224,16 +224,14 @@
     form.example input[type=text] {
       padding: 10px;
       font-size: 17px;
-      border: 1px solid grey;
+      width: 75%;
       float: left;
-      width: 80%;
       background: #f1f1f1;
     }
     
     form.example button {
-      float: left;
-      width: 20%;
-      padding: 10px;
+      width: 100%;
+      height: 100%;
       background: #2196F3;
       color: white;
       font-size: 17px;
@@ -251,6 +249,26 @@
       clear: both;
       display: table;
     }
+    
+    input[type=text] {
+      width: 130px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      background-color: white;
+      background-image: url('searchicon.png');
+      background-position: 10px 10px; 
+      background-repeat: no-repeat;
+      padding: 12px 20px 12px 40px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+    }
+
+    input[type=text]:focus {
+      width: 95%;
+    }
+    
     
     /* Column container */
     .row {  
@@ -300,6 +318,10 @@
         list-style-image: none;
     }
     
+    .img {  
+      width: 100%;
+    }
+    
     /* Footer */
     .footer {
         padding: 0;
@@ -313,7 +335,7 @@
     </head>
     <body>
         <div id="all-contents">
-        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddgm2b7-1bd32a52-31d9-47c1-b49c-698d9f45563f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E0NDM3MjhhLWYzOGUtNDZhYy05OWE1LWEzMmQyNzY0NTc1OVwvZGRnbTJiNy0xYmQzMmE1Mi0zMWQ5LTQ3YzEtYjQ5Yy02OThkOWY0NTU2M2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.41P1rfcbhEjp3CsxngyoDr0Lrg8wk4jOvAVCllEqdEI">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddgm2b7-1bd32a52-31d9-47c1-b49c-698d9f45563f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E0NDM3MjhhLWYzOGUtNDZhYy05OWE1LWEzMmQyNzY0NTc1OVwvZGRnbTJiNy0xYmQzMmE1Mi0zMWQ5LTQ3YzEtYjQ5Yy02OThkOWY0NTU2M2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.41P1rfcbhEjp3CsxngyoDr0Lrg8wk4jOvAVCllEqdEI" alt="Logo">
             <nav>
                 <header4>ParaLolz Studios, Ltd.</header4>
                 <p class="text">
@@ -349,11 +371,14 @@
                                 <a href="#">MediaShare.ware</a>
                             </div>
                         </div>
+                        <div class="dropdown">
                             <li><a href="forumsfaq.html">FORUMS/FAQ's</a></li>
+                            </div>
+                        <div class="dropdown">
                             <li><a href="contactinfo.html">CONTACT INFO</a></li>
-                        <form class="example" action="/action_page.php" style="max-width:300px">
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                            <input type="text" placeholder="Search..." name="search2">
+                        </div>
+                        <form>
+                          <input type="text" name="search" placeholder="Search..">
                         </form>
                         </button>
                     </ul>
@@ -365,10 +390,11 @@
                     <h2>About ParaLolz</h2>
                     <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddfy9zy-1de1c407-1c4f-48f2-9afe-68971d273eca.png/v1/fill/w_400,h_162,strp/paralolz_studios__ltd__banner_logo_1__by_paralolzltd_art_ddfy9zy-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTYyIiwicGF0aCI6IlwvZlwvYTQ0MzcyOGEtZjM4ZS00NmFjLTk5YTUtYTMyZDI3NjQ1NzU5XC9kZGZ5OXp5LTFkZTFjNDA3LTFjNGYtNDhmMi05YWZlLTY4OTcxZDI3M2VjYS5wbmciLCJ3aWR0aCI6Ijw9NDAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.hgeob0Xtv7n5JtgAdBANg3I7ITigTg8h1S6zkC7x1yo" alt="ParaLolz Studios, Ltd.">
                         <div class="interests">
-                        <p3>At ParaLolz, we ensure & guarantee saftey, harmony & unity in the face of adversity by sharing each others thought's, opinions, works & creations to the world.</p3>
+                        <p3>At ParaLolz, we ensure & guarantee safety, harmony & unity in the face of adversity by sharing each others' thoughts, opinions, works & creations to the world.</p3>
                         <p3>On here, you can choose to create music, play games like PlatformWave in my Portfolio section & as well as view and share art and creations with others either for fun or for criticism. Either way, it's YOUR experience. :3</p3>
                     <h2>Thank you for choosing to visit ParaLolz.net</h2>
                     <p4>Enjoy your stay.</p4>
+                  </div>
                   </div>
                   </div>
                 </main>
@@ -406,9 +432,7 @@
                     </div>
                 </div>
                     <div class="content">
-                        <header4 class="text">
-                        QWERTY4
-                        </header4>
+                        <header4 class="text">QWERTY4</header4>
                         <p2 class="text">
                         Webpunk Vaporwave Artist
                         </p2>
