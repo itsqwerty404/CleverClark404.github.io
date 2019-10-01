@@ -2,9 +2,10 @@
 <html>
     <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
     <style>
     /* Style the header */
     
@@ -16,11 +17,16 @@
     
     body {
         color: blue;
+
     }
 
     h1 {
-        text-align: center;
+        text-align: inherit;
         color: blue;
+        font-size: 50px;
+        font-family: 'Aldrich';
+        line-height: 150%;
+        font-weight: bold;
         text-shadow: 2px 2px black;
     }
     
@@ -42,6 +48,7 @@
     
     p   {
         text-align: center;
+        color: blue;
         text-shadow: none;
     }
     
@@ -51,19 +58,51 @@
         text-shadow: none;
     }
     
-    .fontstr {
-        font-stretch: ultra-condensed
-    }
-    
     p3  {
         text-align: center;
-        
+        font-family: Arial, serif;
         color: blue;
+    }
+    
+    p::first-letter {
+      font-size: xx-large;
     }
     
     p4  {
         text-align: center;
         color: blue;
+    }
+    
+    p5  {
+        text-align: inherit;
+        color: white;
+        font-size: 50px;
+        font-variant: small-caps;
+        font-family: Times, Times New Roman, serif;
+        font-weight: bold;
+    }
+    
+    p6  {
+        text-align: inherit;
+        color: red;
+        font-size: 50px;
+        font-variant: small-caps;
+        font-family: Impact, serif;
+        font-weight: bold;
+    }
+    
+    p7  {
+        text-align: inherit;
+        color: blue;
+        font-size: 40px;
+        font-style: oblique;
+        font-variant: small-caps;
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-weight: bold;
+    }
+    
+    p8  {
+        text-align: center; 
     }
     
     section {
@@ -86,18 +125,21 @@
 
     li a:hover {
         background-color: grey;
+        color: #505050;
     }
+    
     body {
         color: white;
         background-color: blue;
-        padding: 15px;
-        margin: 20px;
+        padding: 0 100px;
+        margin: 15px;
         font-family: 'Aldrich';
         font-size: 16px;
         text-align: justify;
     }
     header4 {
         font-size: 4em;
+        font-family: 'Orbitron';
         text-shadow: 4px 5px black;
         font-weight: bold;
         text-align: center;
@@ -121,14 +163,34 @@
         text-align: center;
     }
 
-    #all-contents {
-        max-width: 1987px;
+    .all-contents {
+        margin: 0 150px;
         text-align: center;
-        margin: auto;
     }
     html {
         background: url(http://textures.world/wp-content/uploads/2018/10/04-Isometric-Cube-Pattern-Background-Texture-copy.jpg) no-repeat center fixed; 
         background-size: cover;
+    }
+    
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      font-family: Impact;
+      border: none;
+      outline: none;
+      background-color: red;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+    
+    #myBtn:hover {
+      background-color: darkred;
     }
 
     /* navigation menu */
@@ -151,7 +213,6 @@
       padding: 0;
       font-family: 'Aldrich';
       font-size: 16px;
-      border: none;
       cursor: pointer;
     }
     
@@ -171,8 +232,10 @@
       display: none;
       position: absolute;
       background: grey;
-      min-width: 195px;
-      box-shadow: 0 8px 16px 0 rgb(0,0,0,0);
+      min-width: 100%;
+      border-top: 5px outset grey;
+      border-width:5px;  
+      border-style:outset;
       z-index: 1;
     }
         
@@ -207,6 +270,9 @@
         background: grey;
         list-style-image: inherit;
         padding: 0;
+        border-bottom: 5px solid grey;
+        border-width:5px;  
+        border-style:outset;
     }
     nav li {
         display: inline-block;
@@ -217,16 +283,12 @@
         color: white;
     }
     
-    * {
-      box-sizing: border-box;
-    }
-    
     form.example input[type=text] {
       padding: 10px;
       font-size: 17px;
       width: 75%;
       float: left;
-      background: #f1f1f1;
+      background: white;
     }
     
     form.example button {
@@ -250,26 +312,129 @@
       display: table;
     }
     
-    input[type=text] {
-      width: 130px;
+    /* Style the submit button */
+    form.example button {
+      float: left;
+      width: 20%;
+      padding: 10px;
+      background: #2196F3;
+      color: white;
+      font-size: 17px;
+      border: 1px solid grey;
+      border-left: none; /* Prevent double borders */
+      cursor: pointer;
+    }
+    
+    form.example button:hover {
+      background: #0b7dda;
+    }
+    
+    /* Full-width input fields */
+    input[type=text], input[type=password] {
+      width: 25%;
+      padding: 3.5px 10px;
+      margin: 8px 0;
+      display: column;
+      border: 1px solid #ccc;
       box-sizing: border-box;
-      border: 2px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-      background-color: white;
-      background-image: url('searchicon.png');
-      background-position: 10px 10px; 
-      background-repeat: no-repeat;
-      padding: 12px 20px 12px 40px;
-      -webkit-transition: width 0.4s ease-in-out;
-      transition: width 0.4s ease-in-out;
+    }
+    
+    /* Extra styles for the cancel button */
+    .cancelbtn {
+      width: auto;
+      padding: 10px 18px;
+      background-color: #f44336;
+    }
+    
+    /* Center the image and position the close button */
+    .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+      position: relative;
+    }
+    
+    img.avatar {
+      width: 15%;
+      border-radius: none;
+    }
+    
+    .container {
+      padding: 50px 150px 50px 500px;
+    }
+    
+    span.psw {
+      float: right;
+      color: blue;
+      padding-top: 16px;
+    }
+    
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      padding-top: 60px;
+    }
+    
+    /* Modal Content/Box */
+    .modal-content {
+      background-color: blue;
+      margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+    }
+    
+    /* The Close Button (x) */
+    .close {
+      position: absolute;
+      right: 25px;
+      top: 0;
+      color: red;
+      font-size: 35px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: red;
+      cursor: pointer;
+    }
+    
+    /* Add Zoom Animation */
+    .animate {
+      -webkit-animation: animatezoom 0.6s;
+      animation: animatezoom 0.6s
+    }
+    
+    @-webkit-keyframes animatezoom {
+      from {-webkit-transform: scale(0)} 
+      to {-webkit-transform: scale(1)}
+    }
+      
+    @keyframes animatezoom {
+      from {transform: scale(0)} 
+      to {transform: scale(1)}
+    }
+    
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+      span.psw {
+         display: block;
+         color: blue;
+         float: none;
+      }
+      .cancelbtn {
+         width: 100%;
+      }
     }
 
-    input[type=text]:focus {
-      width: 95%;
-    }
-    
-    
     /* Column container */
     .row {  
       display: block;
@@ -283,19 +448,49 @@
       padding: 0;
     }
     
-    /* Main column */
-    .main {   
-      flex: 100%;
+    * {
+      box-sizing: border-box;
+    }
+    .menu {
+      float: left;
+      background: white;
+      color: blue;
+      width: 100%;
+    }
+    .menuitem {
+      padding: 8px;
+      margin-top: 7px;
+      border-bottom: 1px solid black;
+    }
+    .main {
+      float: left;
+      width: 100%;
+      padding: 0;
+      overflow: hidden;
+    }
+    .right {
       background-color: white;
-      padding: 50px;
+      float: left;
+      width: 100%;
+      padding: 10px 15px;
+      margin-top: 50px;
     }
     
-    /* Fake image, just for this example */
-    .fakeimg {
-      background: grey;
-      width: 10%;
-      padding: 50px;
-      color: white;
+    @media only screen and (max-width:800px) {
+      /* For tablets: */
+      .main {
+        width: 80%;
+        padding: 0;
+      }
+      .right {
+        width: 100%;
+      }
+    }
+    @media only screen and (max-width:500px) {
+      /* For mobile phones: */
+      .menu, .main, .right {
+        width: 100%;
+      }
     }
     
     .sidebar {
@@ -318,10 +513,6 @@
         list-style-image: none;
     }
     
-    .img {  
-      width: 100%;
-    }
-    
     /* Footer */
     .footer {
         padding: 0;
@@ -331,17 +522,47 @@
         background: blue;
     }
     </style>
-        <title>ParaLolz Studios, Ltd.</title>
+        <title>paralolz.net</title>
     </head>
     <body>
-        <div id="all-contents">
-        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddgm2b7-1bd32a52-31d9-47c1-b49c-698d9f45563f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E0NDM3MjhhLWYzOGUtNDZhYy05OWE1LWEzMmQyNzY0NTc1OVwvZGRnbTJiNy0xYmQzMmE1Mi0zMWQ5LTQ3YzEtYjQ5Yy02OThkOWY0NTU2M2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.41P1rfcbhEjp3CsxngyoDr0Lrg8wk4jOvAVCllEqdEI" alt="Logo">
+        <div class="all-contents">
+            <button onclick="topFunction()" id="myBtn" title="Go to top">TOP</button>
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddgm2b7-1bd32a52-31d9-47c1-b49c-698d9f45563f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E0NDM3MjhhLWYzOGUtNDZhYy05OWE1LWEzMmQyNzY0NTc1OVwvZGRnbTJiNy0xYmQzMmE1Mi0zMWQ5LTQ3YzEtYjQ5Yy02OThkOWY0NTU2M2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.41P1rfcbhEjp3CsxngyoDr0Lrg8wk4jOvAVCllEqdEI" alt="LOGO" title="paralolz.net" >
             <nav>
-                <header4>ParaLolz Studios, Ltd.</header4>
+                <header4>paralolz.net</header4>
                 <p class="text">
-                    <p>The Medium Is The Message</p>
+                    <p2>Connect, Create, Communicate™</p2>
                     <ul>
                         <button class="dropbtn">
+                        <button onclick="topFunction()" id="myBtn" title="Go to top">TOP</button>
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                        <div id="id01" class="modal">
+                          
+                          <form class="modal-content animate" action="/action_page.php" method="post">
+                            <div class="imgcontainer">
+                              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                              <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddh0eaj-8dacbb07-48ef-4186-9426-fdc7df84c528.png/v1/fill/w_200,h_200,q_70,strp/paralolz_net_paralogin__login_logo__by_paralolzltd_art_ddh0eaj-200h.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzUwIiwicGF0aCI6IlwvZlwvYTQ0MzcyOGEtZjM4ZS00NmFjLTk5YTUtYTMyZDI3NjQ1NzU5XC9kZGgwZWFqLThkYWNiYjA3LTQ4ZWYtNDE4Ni05NDI2LWZkYzdkZjg0YzUyOC5wbmciLCJ3aWR0aCI6Ijw9NzUwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.YLkRvXc7TAmAGSJOS-tq9X_z5HSeABnfuWqlVOKoiU4" alt="Avatar" class="avatar" title="My Account">
+                            </div>
+                        
+                            <div class="container">
+                              <label for="uname"><b>Username</b></label>
+                              <input type="text" placeholder="Enter Username" name="uname" required>
+                        
+                              <label for="psw"><b>Password</b></label>
+                              <input type="password" placeholder="Enter Password" name="psw" required>
+                                
+                              <button type="submit">Login</button>
+                              <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                              </label>
+                            </div>
+                        
+                            <div class="container" style="background-color:#f1f1f1">
+                              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                              <span class="psw">Forgot <a href="#">password?</a></span>
+                            </div>
+                          </form>
+                        </div>
                         <div class="dropdown">
                             <li><a href="index.html">HOME</a></li>
                             <div class="dropdown-content">
@@ -378,41 +599,44 @@
                             <li><a href="contactinfo.html">CONTACT INFO</a></li>
                         </div>
                         <form>
-                          <input type="text" name="search" placeholder="Search..">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                            <input type="text" name="search" placeholder="Search..">
                         </form>
                         </button>
                     </ul>
                 </nav>
                 <main>
-                <div class="row">
-                  <div class="side">
+                <div class="main">
+                  <div class="menu">
                     <h1>Welcome to ParaLolz.net! :D</h1>
                     <h2>About ParaLolz</h2>
                     <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddfy9zy-1de1c407-1c4f-48f2-9afe-68971d273eca.png/v1/fill/w_400,h_162,strp/paralolz_studios__ltd__banner_logo_1__by_paralolzltd_art_ddfy9zy-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTYyIiwicGF0aCI6IlwvZlwvYTQ0MzcyOGEtZjM4ZS00NmFjLTk5YTUtYTMyZDI3NjQ1NzU5XC9kZGZ5OXp5LTFkZTFjNDA3LTFjNGYtNDhmMi05YWZlLTY4OTcxZDI3M2VjYS5wbmciLCJ3aWR0aCI6Ijw9NDAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.hgeob0Xtv7n5JtgAdBANg3I7ITigTg8h1S6zkC7x1yo" alt="ParaLolz Studios, Ltd.">
                         <div class="interests">
-                        <p3>At ParaLolz, we ensure & guarantee safety, harmony & unity in the face of adversity by sharing each others' thoughts, opinions, works & creations to the world.</p3>
-                        <p3>On here, you can choose to create music, play games like PlatformWave in my Portfolio section & as well as view and share art and creations with others either for fun or for criticism. Either way, it's YOUR experience. :3</p3>
+                        <div class="para">
+                        <p3>At ParaLolz, we ensure & guarantee safety, harmony & unity in the face of adversity by sharing each others' thoughts, opinions, works & creations to the world.<br>
+                        <br>On here, you can choose to create music, play games like PlatformWave in my Portfolio section, as well as view and share art and creations with others either for fun or for criticism.<br> Either way, it's YOUR experience. :3</p3>
                     <h2>Thank you for choosing to visit ParaLolz.net</h2>
                     <p4>Enjoy your stay.</p4>
+                    </div>
                   </div>
                   </div>
                   </div>
                 </main>
                   <div class="main">
-                  <div class="side">
-                    <h1>TOP! Featured</h1>
+                  <div class="right">
+                    <h1>
+                    <p6>TOP!</p6>
+                    <p7>Featured</p7></h1>
                     <h5><a href="https://youtu.be/vtHIueK8Afk">New Dreams Ltd.</a> by Laserdisc Visions</h5>
                     <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddghtc0-1dee7b64-08ef-423b-b7e9-559bf368e67d.png/v1/fill/w_400,h_400,strp/aotw__new_dreams_ltd_by_laserdisc_visions_by_paralolzltd_art_ddghtc0-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvYTQ0MzcyOGEtZjM4ZS00NmFjLTk5YTUtYTMyZDI3NjQ1NzU5XC9kZGdodGMwLTFkZWU3YjY0LTA4ZWYtNDIzYi1iN2U5LTU1OWJmMzY4ZTY3ZC5wbmciLCJ3aWR0aCI6Ijw9NDAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.loVTwUQ0g7RNPV0rQMGevalSQTcDk3-DNMSdofoXzZo" alt="New Dreams Ltd.">
-                    <div class="p3 pos">
-                    <p3>Honestly, what can I say about this album that hasn't already been said before?</p3>
-                    </div>
-                    <p3>Yes, this IS a precursor to Vektroid's delving into the vaporwave scene.</p3>
-                    <p3>But, that doesn't necessarily mean that it's automatically considered good by default.
-                    Firstly, let's talk about the contents within the album.</p3>
+                    <br><p3>Honestly, what can I say about this album that hasn't already been said before?</p3>
+                    <br><p>Yes, this IS a precursor to Vektroid's delving into the vaporwave scene.
+                    But, that doesn't necessarily mean that it's automatically considered good by default.
+                    Firstly, let's talk about the contents within the album.</p>
                     <h2>THE CONTENTS</h2>
                     <div class="p3 pos">
-                    <p3>We start off with a rather hazy track: "Mind Access"</p3>
-                        <p3>It's actually rather soothing to listen to in the short span of a minute or two. It's a simple sampling repetition of "(JINGLE) Pia Over" by Naofumi Hataya, one of many composers I assume of the game NiGHTS Into Dreams. It's a simple, yet effective way of introducing this odd segahaze vaporwave album.</p3>
+                    <p>We start off with a rather hazy track: "Mind Access"</p>
+                        <p>It's actually rather soothing to listen to in the short span of a minute or two. It's a simple sampling repetition of "(JINGLE) Pia Over" by Naofumi Hataya, one of many composers I assume of the game NiGHTS Into Dreams. It's a simple, yet effective way of introducing this odd segahaze vaporwave album.</p>
                             <p3>"Malls" then begins to play. This time with a rather intriguing mix of japanese commercials overlayed by what sounds like something you'd hera in an actual mall. Or 'malls', I guess you would say. Lol.</p3>
                                 <p3>Then comes in "Dual". I like this track a lot, with the only gripe of it being that it's very shortlived. :(</p3>
                                     <p3>"Idgaf Island", a rather touching tongue-in-cheek name for a track, starts playing. If you haven't already guessed it by now, some of these tracks are rather short and repetitive with seemingly no real addage other than the Jap-comm mix in the background. I guess that would act as a bit of a distraction for the ears if Ramona thought that her tracks weren't good enough already, but, eh. What can you do, anyhow?</p3>
@@ -420,7 +644,7 @@
                         </div>
                     </div>
                     <div class="main">
-                    <div class="side">
+                    <div class="right">
                     <h1>ChronoNEWS</h1>
                     <h5>Where EveryTime There's Something New</h5>
                     <img src=https://i.ytimg.com/vi/hirJZ--n9t0/hqdefault.jpg alt="NEWS">
@@ -432,12 +656,10 @@
                     </div>
                 </div>
                     <div class="content">
+                    <section class="section">
                         <header4 class="text">QWERTY4</header4>
-                        <p2 class="text">
-                        Webpunk Vaporwave Artist
-                        </p2>
-                        <section class="interests">
-                            <header>Interests</header>
+                        <header>Vaporwave Webpunk Artist</header>
+                            <p5>Interests</p5>
                             <ul>
                                 <li>Web Design</li>
                                 <li>Artistic Storytelling</li>
@@ -451,5 +673,26 @@
         <div class="footer">
             <h3>Copyright 2019 | All Rights Reserved | Paralolz Studios, Ltd.</h3>
         </div>
+        <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
     </body>
 </html>

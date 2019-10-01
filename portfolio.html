@@ -1,7 +1,11 @@
 <!DOCTYPE HTML>
 <html>
     <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
         <style type="text/css">
             /* Style the header */
             .header {
@@ -12,27 +16,97 @@
             
             body {
                 color: blue;
+        
             }
         
             h1 {
+                text-align: inherit;
+                color: blue;
+                font-size: 50px;
+                font-family: 'Aldrich';
+                line-height: 150%;
+                font-weight: bold;
+                text-shadow: 2px 2px black;
+            }
+            
+            h2 {
                 text-align: center;
                 color: blue;
-                text-shadow: 2px 1px black;
+            }
+            
+            h3 {
+                text-align: center;
+                color: white;
+            }
+            
+            h5 {
+                text-align: center;
+                color: blue;
+                font-size: 1em;
             }
             
             p   {
-                text-shadow: 2px 1px black;
+                text-align: center;
+                color: blue;
+                text-shadow: none;
             }
             
             p2  {
                 text-align: center;
+                color: white;
+                text-shadow: none;
+            }
+            
+            p3  {
+                text-align: center;
+                
                 color: blue;
-                text-shadow: 1px 1px black;
+            }
+            
+            p4  {
+                text-align: center;
+                font-family: Times New Roman, serif;
+                font-style: oblique;
+                font-weight: bold;
+                color: blue;
+            }
+            
+            p5  {
+                text-align: inherit;
+                color: white;
+                font-size: 50px;
+                font-variant: small-caps;
+                font-family: Times, Times New Roman, serif;
+                font-weight: bold;
+            }
+            
+            p6  {
+                text-align: inherit;
+                color: red;
+                font-size: 50px;
+                font-variant: small-caps;
+                font-family: Impact, serif;
+                font-weight: bold;
+            }
+            
+            p7  {
+                text-align: inherit;
+                color: blue;
+                font-size: 40px;
+                font-style: oblique;
+                font-variant: small-caps;
+                font-family: "Arial Black", Gadget, sans-serif;
+                font-weight: bold;
+            }
+            
+            p8  {
+                text-align: center; 
             }
             
             section {
                 text-align: center;
-                color: blue;
+                color: white;
+                list-style-image: none;
             }
             
             li {
@@ -49,27 +123,47 @@
         
             li a:hover {
                 background-color: grey;
+                color: #505050;
             }
+            
             body {
                 color: white;
                 background-color: blue;
-                padding: 15px;
-                margin: 20px;
+                padding: 0 100px;
+                margin: 15px;
                 font-family: 'Aldrich';
                 font-size: 16px;
                 text-align: justify;
             }
             header4 {
                 font-size: 4em;
+                font-family: 'Orbitron';
                 text-shadow: 4px 5px black;
                 font-weight: bold;
                 text-align: center;
                 width: auto;
             }
-            #all-contents {
-                max-width: 1987px;
+            
+            /* Style the header */
+            .header group {
+                padding: 50px;
+                text-align: left;
+                background: #1abc9c;
+                color: white;
+            }
+            
+            /* Increase the font size of the h1 element */
+            .header  {
+                font-size: 40px;
+            }
+            
+            p3 pos  {
                 text-align: center;
-                margin: justify;
+            }
+        
+            .all-contents {
+                margin: 0 150px;
+                text-align: center;
             }
             html {
                 background: url(http://textures.world/wp-content/uploads/2018/10/04-Isometric-Cube-Pattern-Background-Texture-copy.jpg) no-repeat center fixed; 
@@ -106,87 +200,75 @@
               display: block;
             }
             
-            #home {
-              left: 0;
-              width: 80px;
-              background: url('img_navsprites.gif') 0 0;
-            }
-            
-            #prev {
-              left: 63px;
-              width: 43px;
-              background: url('img_navsprites.gif') -47px 0;
-            }
-            
-            #next {
-              left: 129px;
-              width: 43px;
-              background: url('img_navsprites.gif') -91px 0;
-            }
-            
             /* Style The Dropdown Button */
             .dropbtn {
-                background: grey;
-                color: white;
-                padding: 0;
-                font-family: 'Aldrich';
-                font-size: 16px;
-                border: none;
-                cursor: pointer;
+              background: grey;
+              color: white;
+              padding: 0;
+              font-family: 'Aldrich';
+              font-size: 16px;
+              cursor: pointer;
             }
             
             .dropbtn a:hover {
-              color: #505050;  
+              color: #505050;
             }
-        
+            
             /* The container <div> - needed to position the dropdown content */
             .dropdown {
-                position: inherit;
-                text-align: center;
-                display: inline-table;
+              position: relative;
+              text-align: center;
+              display: inline-table;
             }
-        
+                
             /* Dropdown Content (Hidden by Default) */
             .dropdown-content {
-                display: none;
-                position: fixed;
-                background: grey;
-                min-width: 195px;
-                box-shadow: 0 8px 16px 0 rgba(0,0,0,0);
-                z-index: 1;
+              display: none;
+              position: absolute;
+              background: grey;
+              min-width: 100%;
+              border-top: 5px outset grey;
+              border-width:5px;  
+              border-style:outset;
+              z-index: 1;
             }
-        
+                
             /* Links inside the dropdown */
             .dropdown-content a {
-                color: white;
-                background: grey;
-                padding: inherit;
-                text-decoration: none;
-                display: block;
+              color: white;
+              background: grey;
+              padding: inherit;
+              text-decoration: none;
+              display: block;
             }
-        
+                
             /* Change color of dropdown links on hover */
             .dropdown-content a:hover {
-                background: grey;
-                color: #505050;
+              background: grey;
+              color: #505050;
             }
-        
+                
             /* Show the dropdown menu on hover */
             .dropdown:hover .dropdown-content {
-                display: table;
-                padding: 10px 5px 10px 5px;
+              display: table;
+              padding: 10px 5px 10px 5px;
             }
-        
+                
             /* Change the background color of the dropdown button when the dropdown content is shown */
             .dropdown:hover .dropbtn a:hover {
-                background-color: grey;
+              background: yellow;
             }
+            
+            
         
             nav ul {
                 color: white;
                 background: grey;
                 list-style-image: inherit;
-                padding: inherit;
+                padding: 0;
+                border-bottom: 5px solid grey;
+                border-width:5px;  
+                border-style:outset;
             }
             nav li {
                 display: inline-block;
@@ -196,15 +278,223 @@
                 text-decoration: none;
                 color: white;
             }
-        
-            /* main container area beneath menu */
-            main {
-                background: rgb(255, 255, 255);
-                display: -webkit-box;
+            
+            * {
+              box-sizing: border-box;
             }
+            
+            form.example input[type=text] {
+              padding: 10px;
+              font-size: 17px;
+              width: 75%;
+              float: left;
+              background: white;
+            }
+            
+            form.example button {
+              width: 100%;
+              height: 100%;
+              background: #2196F3;
+              color: white;
+              font-size: 17px;
+              border: 1px solid grey;
+              border-left: none;
+              cursor: pointer;
+            }
+            
+            form.example button:hover {
+              background: #0b7dda;
+            }
+            
+            form.example::after {
+              content: "";
+              clear: both;
+              display: table;
+            }
+            
+            /* Style the submit button */
+            form.example button {
+              float: left;
+              width: 20%;
+              padding: 10px;
+              background: #2196F3;
+              color: white;
+              font-size: 17px;
+              border: 1px solid grey;
+              border-left: none; /* Prevent double borders */
+              cursor: pointer;
+            }
+            
+            form.example button:hover {
+              background: #0b7dda;
+            }
+            
+            /* Full-width input fields */
+            input[type=text], input[type=password] {
+              width: 25%;
+              padding: 3.5px 10px;
+              margin: 8px 0;
+              display: column;
+              border: 1px solid #ccc;
+              box-sizing: border-box;
+            }
+            
+            /* Extra styles for the cancel button */
+            .cancelbtn {
+              width: auto;
+              padding: 10px 18px;
+              background-color: #f44336;
+            }
+            
+            /* Center the image and position the close button */
+            .imgcontainer {
+              text-align: center;
+              margin: 24px 0 12px 0;
+              position: relative;
+            }
+            
+            img.avatar {
+              width: 15%;
+              border-radius: none;
+            }
+            
+            .container {
+              padding: 50px 150px 50px 500px;
+            }
+            
+            span.psw {
+              float: right;
+              color: blue;
+              padding-top: 16px;
+            }
+            
+            /* The Modal (background) */
+            .modal {
+              display: none; /* Hidden by default */
+              position: fixed; /* Stay in place */
+              z-index: 1; /* Sit on top */
+              left: 0;
+              top: 0;
+              width: 100%; /* Full width */
+              height: 100%; /* Full height */
+              overflow: auto; /* Enable scroll if needed */
+              background-color: rgb(0,0,0); /* Fallback color */
+              background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+              padding-top: 60px;
+            }
+            
+            /* Modal Content/Box */
+            .modal-content {
+              background-color: blue;
+              margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+              border: 1px solid #888;
+              width: 80%; /* Could be more or less, depending on screen size */
+            }
+            
+            /* The Close Button (x) */
+            .close {
+              position: absolute;
+              right: 25px;
+              top: 0;
+              color: red;
+              font-size: 35px;
+              font-weight: bold;
+            }
+            
+            .close:hover,
+            .close:focus {
+              color: red;
+              cursor: pointer;
+            }
+            
+            /* Add Zoom Animation */
+            .animate {
+              -webkit-animation: animatezoom 0.6s;
+              animation: animatezoom 0.6s
+            }
+            
+            @-webkit-keyframes animatezoom {
+              from {-webkit-transform: scale(0)} 
+              to {-webkit-transform: scale(1)}
+            }
+              
+            @keyframes animatezoom {
+              from {transform: scale(0)} 
+              to {transform: scale(1)}
+            }
+            
+            /* Change styles for span and cancel button on extra small screens */
+            @media screen and (max-width: 300px) {
+              span.psw {
+                 display: block;
+                 color: blue;
+                 float: none;
+              }
+              .cancelbtn {
+                 width: 100%;
+              }
+            }
+        
+            /* Column container */
+            .row {  
+              display: block;
+            }
+            
+            /* Create two unequal columns that sits next to each other */
+            /* Sidebar/left column */
+            .side {
+              flex: 100%;
+              background-color: white;
+              padding: 0;
+            }
+            
+            * {
+              box-sizing: border-box;
+            }
+            .menu {
+              float: left;
+              width: 20%;
+            }
+            .menuitem {
+              padding: 8px;
+              margin-top: 7px;
+              border-bottom: 1px solid #f1f1f1;
+            }
+            /* Main column */
+            .main {   
+              flex: 100%;
+              background-color: white;
+              box-shadow: 10px 10px black;
+              padding: 50px 350px;
+            }
+            .right {
+              background-color: lightblue;
+              float: left;
+              width: 20%;
+              padding: 10px 15px;
+              margin-top: 7px;
+            }
+            
+            @media only screen and (max-width:800px) {
+              /* For tablets: */
+              .main {
+                width: 80%;
+                padding: 0;
+              }
+              .right {
+                width: 100%;
+              }
+            }
+            @media only screen and (max-width:500px) {
+              /* For mobile phones: */
+              .menu, .main, .right {
+                width: 100%;
+              }
+            }
+            
             .sidebar {
-                margin-right: 100px;
-                padding: 0px;
+                margin-right: 0;
+                padding: 0;
             }
             .sidebar img {
                 width: 100px;
@@ -226,6 +516,13 @@
                 text-align: center;
             }
             
+            #grad1 {
+                height: 125px;
+                font-family: 'Orbitron';
+                background-color: green; /* For browsers that do not support gradients */
+                background-image: linear-gradient(to right, red, white, blue); /* Standard syntax (must be last) */
+            }
+            
             img {
                 padding: 5px;
                 width: 150px;
@@ -240,10 +537,10 @@
             }
             
             #portfolio li {
-                font-color: blue;
-                padding: 0px;
-                border-radius: 0px;
-                margin-bottom: 0px;
+                color: blue;
+                padding: 0;
+                border-radius: 0;
+                margin-bottom: 0;
             }
             
             #portfolio li:hover {
@@ -251,7 +548,7 @@
             } 
             
             #portfolio a {
-                font-color: blue;
+                color: blue;
                 text-decoration: none;
                 color: blue;
             }
@@ -265,78 +562,111 @@
                 background: blue;
             }    
         </style>
-            <title>ParaLolz Studios, Ltd.</title>
+            <title>paralolz.net</title>
     </head>
     <body>
-        <div id="all-contents">
-        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddgm2b7-1bd32a52-31d9-47c1-b49c-698d9f45563f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E0NDM3MjhhLWYzOGUtNDZhYy05OWE1LWEzMmQyNzY0NTc1OVwvZGRnbTJiNy0xYmQzMmE1Mi0zMWQ5LTQ3YzEtYjQ5Yy02OThkOWY0NTU2M2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.41P1rfcbhEjp3CsxngyoDr0Lrg8wk4jOvAVCllEqdEI" alt="Logo">
+        <div class="all-contents">
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddgm2b7-1bd32a52-31d9-47c1-b49c-698d9f45563f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E0NDM3MjhhLWYzOGUtNDZhYy05OWE1LWEzMmQyNzY0NTc1OVwvZGRnbTJiNy0xYmQzMmE1Mi0zMWQ5LTQ3YzEtYjQ5Yy02OThkOWY0NTU2M2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.41P1rfcbhEjp3CsxngyoDr0Lrg8wk4jOvAVCllEqdEI" alt="LOGO" title="paralolz.net" >
             <nav>
-                <header4>ParaLolz Studios, Ltd.</header4>
+                <header4>paralolz.net</header4>
                 <p class="text">
-                    <p>The Medium Is The Message</p>
-                <ul>
-                    <button class="dropbtn">
-                    <div class="dropdown">
-                        <li><a href="index.html">HOME</a></li>
-                    <div class="dropdown-content">
-                            <a href="#">TOP! Featured</a>
-                                <a href="#">ChronoNEWS</a>
+                    <p2>Connect, Create, Communicate™</p2>
+                    <ul>
+                        <button class="dropbtn">
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                        <div id="id01" class="modal">
+                          
+                          <form class="modal-content animate" action="/action_page.php" method="post">
+                            <div class="imgcontainer">
+                              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                              <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddh0eaj-8dacbb07-48ef-4186-9426-fdc7df84c528.png/v1/fill/w_200,h_200,q_70,strp/paralolz_net_paralogin__login_logo__by_paralolzltd_art_ddh0eaj-200h.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzUwIiwicGF0aCI6IlwvZlwvYTQ0MzcyOGEtZjM4ZS00NmFjLTk5YTUtYTMyZDI3NjQ1NzU5XC9kZGgwZWFqLThkYWNiYjA3LTQ4ZWYtNDE4Ni05NDI2LWZkYzdkZjg0YzUyOC5wbmciLCJ3aWR0aCI6Ijw9NzUwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.YLkRvXc7TAmAGSJOS-tq9X_z5HSeABnfuWqlVOKoiU4" alt="Avatar" class="avatar" title="My Account">
+                            </div>
+                        
+                            <div class="container">
+                              <label for="uname"><b>Username</b></label>
+                              <input type="text" placeholder="Enter Username" name="uname" required>
+                        
+                              <label for="psw"><b>Password</b></label>
+                              <input type="password" placeholder="Enter Password" name="psw" required>
+                                
+                              <button type="submit">Login</button>
+                              <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                              </label>
+                            </div>
+                        
+                            <div class="container" style="background-color:#f1f1f1">
+                              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                              <span class="psw">Forgot <a href="#">password?</a></span>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="dropdown">
+                            <li><a href="index.html">HOME</a></li>
+                            <div class="dropdown-content">
                                 <a href="#">About ParaLolz</a>
+                                <a href="#">TOP! Featured</a>
+                                <a href="#">ChronoNEWS</a>
                             </div>
                         </div>
                         <div class="dropdown">
-                        <li><a href="portfolio.html">PORTFOLIO</a></li>
+                            <li><a href="portfolio.html">PORTFOLIO</a></li>
                             <div class="dropdown-content">
-                            <a href="#">PlatformWave</a>
-                            <a href="#">More About Me</a>
+                                <a href="#">PlatformWave</a>
+                                <a href="#">More About Me</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="dropdown">
-                        <li><a href="artgallery.html">ART GALLERY</a></li>
+                        <div class="dropdown">
+                            <li><a href="artgallery.html">ART GALLERY</a></li>
                             <div class="dropdown-content">  
-                            <a href="neonexus.html">NEONEXUS</a>
+                                <a href="neonexus.html">NEONEXUS</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="dropdown">
-                        <li><a href="auvi.html">AUVI</a></li>
+                        <div class="dropdown">
+                            <li><a href="auvi.html">AUVI</a></li>
                             <div class="dropdown-content">
-                            <a href="#">VDO</a>
-                            <a href="#">FONiX</a>
-                            <a href="#">MediaShare.ware</a>
+                                <a href="#">VDO</a>
+                                <a href="#">FONiX</a>
+                                <a href="#">MediaShare.ware</a>
+                            </div>
                         </div>
-                    </div>
-                    <li><a href="forumsfaq.html">FORUMS/FAQ's</a></li>
-                    <li><a href="contactinfo.html">CONTACT INFO</a></li>
-                    <form class="example" action="/action_page.php" style="width:auto;">
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                        <input type="text" placeholder="Search..." name="search2">
+                        <div class="dropdown">
+                            <li><a href="forumsfaq.html">FORUMS/FAQ's</a></li>
+                            </div>
+                        <div class="dropdown">
+                            <li><a href="contactinfo.html">CONTACT INFO</a></li>
+                        </div>
+                        <form>
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                            <input type="text" name="search" placeholder="Search..">
                         </form>
-                    </button>
-                </ul>
-            </nav>
+                        </button>
+                    </ul>
+                </nav>
             <main>
-                <div class="sidebar">
-                    <h1>PORTFOLIO</h1>
+                <div id="grad1">
+                    <header4>PORTFOLIO</header4>
                 </div>
-                <div class="content">
                 <ul id="portfolio">
-                    <header>STUFF I WORKED ON:</header>
+                    <p7>STUFF I WORKED ON:</p7>
                 <ul>
+                    <p4>
                     <li>MUSIC</li>
                     <li>ALBUM ART/ALBUM SONGS</li>
                     <li>CONCEPT ART FOR MY WEBCOMIC</li>
                     <li>VIDEOS</li>
                     <li>SERVERS</li>
                     <li>DRAWING & STUFF RELATED TO DRAWING</li>
+                    </p4>
                 </ul>
                 </ul>
-            </div>        
         </main>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script id="portfolioScript">$(document).ready(function() {$.getJSON('projects/projects.json').then(function(data) { data.projects.forEach(function(project){ $('#portfolio').append('<li><a href="projects/' + project.name + '/">' + project.title + ' : ' + project.description + '</a></li>'); }); }); });</script>
     <!-- Footer -->
         <div class="footer">
             <h3>Copyright 2019 | All Rights Reserved | Paralolz Studios, Ltd.</h3>
+        </div>
         </div>
     </body>
 </html>

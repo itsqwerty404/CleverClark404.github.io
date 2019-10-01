@@ -51,6 +51,7 @@
 
     li a:hover {
         background-color: grey;
+        color: #505050;
     }
     body {
         color: white;
@@ -172,16 +173,14 @@
     form.example input[type=text] {
       padding: 10px;
       font-size: 17px;
-      border: 1px solid grey;
+      width: 75%;
       float: left;
-      width: 80%;
-      background: #f1f1f1;
+      background: white;
     }
     
     form.example button {
-      float: left;
-      width: 20%;
-      padding: 10px;
+      width: 100%;
+      height: 100%;
       background: #2196F3;
       color: white;
       font-size: 17px;
@@ -198,6 +197,129 @@
       content: "";
       clear: both;
       display: table;
+    }
+    
+    input[type=text] {
+      width: 100%;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      background-color: white;
+      background-image: url('searchicon.png');
+      background-position: 10px 10px; 
+      background-repeat: no-repeat;
+      padding: 12px 20px 12px 40px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+    }
+
+    input[type=text]:focus {
+      width: 95%;
+    }
+    
+    /* Full-width input fields */
+    input[type=text], input[type=password] {
+      width: 25%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    
+    /* Extra styles for the cancel button */
+    .cancelbtn {
+      width: auto;
+      padding: 10px 18px;
+      background-color: #f44336;
+    }
+    
+    /* Center the image and position the close button */
+    .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+      position: relative;
+    }
+    
+    img.avatar {
+      width: 40%;
+      border-radius: 50%;
+    }
+    
+    .container {
+      padding: 16px;
+    }
+    
+    span.psw {
+      float: right;
+      padding-top: 16px;
+    }
+    
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      padding-top: 60px;
+    }
+    
+    /* Modal Content/Box */
+    .modal-content {
+      background-color: blue;
+      margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+    }
+    
+    /* The Close Button (x) */
+    .close {
+      position: absolute;
+      right: 25px;
+      top: 0;
+      color: red;
+      font-size: 35px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: red;
+      cursor: pointer;
+    }
+    
+    /* Add Zoom Animation */
+    .animate {
+      -webkit-animation: animatezoom 0.6s;
+      animation: animatezoom 0.6s
+    }
+    
+    @-webkit-keyframes animatezoom {
+      from {-webkit-transform: scale(0)} 
+      to {-webkit-transform: scale(1)}
+    }
+      
+    @keyframes animatezoom {
+      from {transform: scale(0)} 
+      to {transform: scale(1)}
+    }
+    
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+      span.psw {
+         display: block;
+         float: none;
+      }
+      .cancelbtn {
+         width: 100%;
+      }
     }
 
     /* main container area beneath menu */
@@ -240,6 +362,38 @@
     </head>
     <body>
         <div id="all-contents">
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                        <div id="id01" class="modal">
+                          
+                          <form class="modal-content animate" action="/action_page.php" method="post">
+                            <div class="imgcontainer">
+                              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                              <img src="img_avatar2.png" alt="Avatar" class="avatar">
+                            </div>
+                        
+                            <div class="container">
+                              <label for="uname"><b>Username</b></label>
+                              <input type="text" placeholder="Enter Username" name="uname" required>
+                        
+                              <label for="psw"><b>Password</b></label>
+                              <input type="password" placeholder="Enter Password" name="psw" required>
+                                
+                              <button type="submit">Login</button>
+                              <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                              </label>
+                            </div>
+                        
+                            <div class="container" style="background-color:#f1f1f1">
+                              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                              <span class="psw">Forgot <a href="#">password?</a></span>
+                            </div>
+                          </form>
+                        </div>
+                        <form>
+                          <input type="text" name="search" placeholder="Search..">
+                        </form>
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddgm2b7-1bd32a52-31d9-47c1-b49c-698d9f45563f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E0NDM3MjhhLWYzOGUtNDZhYy05OWE1LWEzMmQyNzY0NTc1OVwvZGRnbTJiNy0xYmQzMmE1Mi0zMWQ5LTQ3YzEtYjQ5Yy02OThkOWY0NTU2M2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.41P1rfcbhEjp3CsxngyoDr0Lrg8wk4jOvAVCllEqdEI" title="paralolz.net">
             <nav>
                 <header4>ParaLolz Studios, Ltd.</header4>
                 <p class="text">
@@ -277,10 +431,6 @@
                         </div>
                             <li><a href="forumsfaq.html">FORUMS/FAQ's</a></li>
                             <li><a href="contactinfo.html">CONTACT INFO</a></li>
-                        <form class="example" action="/action_page.php" style="max-width:300px">
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                            <input type="text" placeholder="Search..." name="search2">
-                        </form>
                         </button>
                     </ul>
                 </nav>
