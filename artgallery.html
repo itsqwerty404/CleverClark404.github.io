@@ -211,6 +211,7 @@
         background: grey;
         list-style-image: inherit;
         padding: 0;
+        border-bottom: 5px solid grey;
         border-width: 5px;  
         border-style: outset;
     }
@@ -387,7 +388,7 @@
     /* Create two unequal columns that sits next to each other */
     /* Sidebar/left column */
     .side {
-      flex: 100%;
+      flex: 10%;
       background-color: white;
       padding: 0;
     }
@@ -435,6 +436,20 @@
       background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Standard syntax (must be last) */
     }
     
+    .zoom {
+      padding: none;
+      transition: transform .2s;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+    }
+    
+    .zoom:hover {
+      -ms-transform: scale(1.5); /* IE 9 */
+      -webkit-transform: scale(1.5); /* Safari 3-8 */
+      transform: scale(1.5); 
+    }
+    
     img {
       padding: 5px;
       width: 150px;
@@ -453,7 +468,7 @@
     </head>
     <body>
         <div id="all-contents">
-                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddgm2b7-1bd32a52-31d9-47c1-b49c-698d9f45563f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E0NDM3MjhhLWYzOGUtNDZhYy05OWE1LWEzMmQyNzY0NTc1OVwvZGRnbTJiNy0xYmQzMmE1Mi0zMWQ5LTQ3YzEtYjQ5Yy02OThkOWY0NTU2M2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.41P1rfcbhEjp3CsxngyoDr0Lrg8wk4jOvAVCllEqdEI" alt="LOGO" title="paralolz.net" >
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddgm2b7-1bd32a52-31d9-47c1-b49c-698d9f45563f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E0NDM3MjhhLWYzOGUtNDZhYy05OWE1LWEzMmQyNzY0NTc1OVwvZGRnbTJiNy0xYmQzMmE1Mi0zMWQ5LTQ3YzEtYjQ5Yy02OThkOWY0NTU2M2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.41P1rfcbhEjp3CsxngyoDr0Lrg8wk4jOvAVCllEqdEI" alt="LOGO" title="paralolz.net">
             <nav>
                 <header4>paralolz.net</header4>
                 <p class="text">
@@ -536,9 +551,9 @@
           </div>
           <div class="side">
           <div class="row">
-                <img src="https://myrealdomain.com/images/anubis-symbol.png" title="Anubis: Egyptian God of the Dead" alt="Anubis" style="width:15%">
-                <img src="https://starofdavidsite.files.wordpress.com/2016/04/hexagramcolo.jpg?w=400" title="The Star of David w/the 7 Metal Elements of Antiquity" alt="Star of David" style="width:15%">
-                <img src="http://thumb4.zeppy.io/d/l400/pict/163792653659/vintage-symphonic-vcr-tv-combo-retro-gaming-crt-tube-av-in-13-color-with-remote" title="A CRT (Cathode-Ray Tube) Television from the 80s" alt="80s CRT TV" style="width:15%">
+                <img src="https://myrealdomain.com/images/anubis-symbol.png" title="Anubis: Egyptian God of the Dead" alt="Anubis">
+                <img src="https://starofdavidsite.files.wordpress.com/2016/04/hexagramcolo.jpg?w=400" title="The Star of David w/the 7 Metal Elements of Antiquity" alt="Star of David">
+                <img src="http://thumb4.zeppy.io/d/l400/pict/163792653659/vintage-symphonic-vcr-tv-combo-retro-gaming-crt-tube-av-in-13-color-with-remote" title="A CRT (Cathode-Ray Tube) Television from the 80s" alt="80s CRT TV">
              </div>
         </div>
         </main>

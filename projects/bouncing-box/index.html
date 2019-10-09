@@ -13,14 +13,31 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: blue;
+			background-color: none;
+			background-image: url("https://making-the-web.com/sites/default/files/clipart/175398/compact-disk-png-transparent-images-175398-3486504.png");
+			background-size: 70px 70px;
+			background-repeat: no-repeat;
 			font-size: 300%;
 			color: white;
+			font-family: Broadway, serif;
 			text-align: center;
 			display: block;
 			position: absolute;
 			top: 100px;
-			left: 0px;
+			left: 0;
+		}
+		
+		body  {
+		    /* The image used */
+          background-image: url("https://i.ytimg.com/vi/tNkZsRW7h2c/maxresdefault.jpg");
+        
+          /* Full height */
+          height: 100%;
+        
+          /* Center and scale the image nicely */
+          background-position: auto;
+          background-repeat: no-repeat;
+          background-size: cover;
 		}
 	</style>
 
@@ -38,23 +55,63 @@
 			// jQuery stuff setup for you
 			var box = jQuery('.box');
 			var boardWidth = jQuery('.board').width();
+			var boardHeight = jQuery(window).height();
 	
 			// TODO 2 - Variable declarations 
             var position = 0;
             var points = 0;
             var speed = 10;
             var direction = 1;
+            var positionY = 0;
+            var directionY = 1;
+            box.css('left', position);      // moves the box to the x-coordinate of <position> 
+            box.css('top', positionY);
+            box.text(points);               // changes the text of the box to display the value of <points>
 			
 			function update() {
 				// TODO 3 / 6 / 7 / 8
-				
-			};
+				position += speed * direction;    // increment position by speed on every update
+                positionY += speed * directionY;
+                console.log("new position: " + position);
+                
+                if(position +65 > boardWidth) {
+                    console.log("Right Wall Hit");
+                    direction = -1;
+                    console.log(direction);
+                }
+                
+                if(position < 0) {
+                    console.log("Left Wall Hit");
+                    direction = 1;
+                    console.log(direction);
+                    
+                }
+                
+                if(positionY +65 > boardHeight) {
+                    console.log("Bottom Wall Hit");
+                    directionY = -1;
+                    console.log(direction);
+                }
+                
+                if(positionY < 0) {
+                    console.log("Top Wall Hit");
+                    directionY = 1;
+                    console.log(direction);
+                    
+                }
+                
+                box.css('left', position);      // set the 'left' CSS property of the box to the new value of position
+                box.css('top', positionY);
+            }
 
 
 			
 			function handleBoxClick() {
 				// TODO 4 / 5
-				
+				points += 1;           // increase the point total
+                box.text(points);      // update the new points total displayed by the box
+                position = Math.random();         // reset the position of the box to 0
+                speed += 3;    // increase the speed of the box on every click
 			};
 
 
