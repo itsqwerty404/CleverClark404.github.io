@@ -110,7 +110,8 @@
 				// TODO 4 / 5
 				points += 1;           // increase the point total
                 box.text(points);      // update the new points total displayed by the box
-                position = Math.random();         // reset the position of the box to 0
+                position = Math.random() * boardWidth;         // reset the position of the box to 0
+                positionY = Math.random() * boardHeight;
                 speed += 3;    // increase the speed of the box on every click
 			};
 
