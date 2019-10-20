@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
+    <link rel="icon" href="paraicon.ico" />
     <style>
     /* Style the header */
     
@@ -126,13 +127,14 @@
     
     body {
         color: white;
-        background-color: blue;
+        background-color: none;
         padding: 0 100px;
         margin: 15px;
         font-family: 'Aldrich';
         font-size: 16px;
         text-align: justify;
     }
+    
     header4 {
         font-size: 4em;
         font-family: 'Orbitron';
@@ -140,6 +142,15 @@
         font-weight: bold;
         text-align: center;
         width: auto;
+        transition: all 0.3s ease-in;
+        text-decoration:none;
+    }
+    
+    header4:hover {
+        -webkit-stroke-width: 5.3px;
+        -webkit-stroke-color: #FFFFFF;
+        -webkit-fill-color: #FFFFFF;
+        text-shadow: 1px 0 20px blue;
     }
     
     /* Style the header */
@@ -164,7 +175,7 @@
         text-align: center;
     }
     html {
-        background: url(http://textures.world/wp-content/uploads/2018/10/04-Isometric-Cube-Pattern-Background-Texture-copy.jpg) no-repeat center fixed; 
+        background: url(paragrid.gif) no-repeat center fixed; 
         background-size: cover;
     }
     
@@ -209,6 +220,7 @@
       padding: 0;
       font-family: 'Aldrich';
       font-size: 16px;
+      border: none;
       cursor: pointer;
     }
     
@@ -267,16 +279,25 @@
         list-style-image: inherit;
         padding: 0;
         border-bottom: 5px solid grey;
-        border-width:5px;  
-        border-style:outset;
+        border-width: 5px;  
+        border-style: outset;
     }
     nav li {
         display: inline-block;
         padding: 0;
     }
+    
     nav a {
         text-decoration: none;
         color: white;
+        transition: all 0.3s ease-in;
+    }
+    
+    nav a:hover {
+        -webkit-stroke-width: 5.3px;
+        -webkit-stroke-color: #FFFFFF;
+        -webkit-fill-color: #FFFFFF;
+        text-shadow: 1px 0 20px white;
     }
     
     form.example input[type=text] {
@@ -507,8 +528,19 @@
         font-size: 2em;
     }
     
+    
+    #paralogo {
+      -webkit-transition: -webkit-transform 1s ease-in-out;
+              transition:         transform 1s ease-in-out;
+    }
+    #paralogo:hover {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+
+    
     ul {
-        list-style-image: none;
+        list-style: none;
     }
     
     /* Footer */
@@ -517,7 +549,7 @@
         font-size: 10px;
         color: blue;
         text-align: center;
-        background: blue;
+        background: none;
     }
     </style>
         <title>paralolz.net</title>
@@ -525,82 +557,49 @@
     <body>
         <div class="all-contents">
             <button onclick="topFunction()" id="myBtn" title="Go to top">TOP</button>
-                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddgm2b7-1bd32a52-31d9-47c1-b49c-698d9f45563f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E0NDM3MjhhLWYzOGUtNDZhYy05OWE1LWEzMmQyNzY0NTc1OVwvZGRnbTJiNy0xYmQzMmE1Mi0zMWQ5LTQ3YzEtYjQ5Yy02OThkOWY0NTU2M2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.41P1rfcbhEjp3CsxngyoDr0Lrg8wk4jOvAVCllEqdEI" alt="LOGO" title="paralolz.net" >
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddgm2b7-1bd32a52-31d9-47c1-b49c-698d9f45563f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E0NDM3MjhhLWYzOGUtNDZhYy05OWE1LWEzMmQyNzY0NTc1OVwvZGRnbTJiNy0xYmQzMmE1Mi0zMWQ5LTQ3YzEtYjQ5Yy02OThkOWY0NTU2M2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.41P1rfcbhEjp3CsxngyoDr0Lrg8wk4jOvAVCllEqdEI" alt="LOGO" id="paralogo" title="paralolz.net" >
             <nav>
                 <header4>paralolz.net</header4>
                 <p class="text">
                     <p2>Connect, Create, Communicate™</p2>
                     <ul>
                         <button class="dropbtn">
-                        <button onclick="topFunction()" id="myBtn" title="Go to top">TOP</button>
-                        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-                        <div id="id01" class="modal">
-                          
-                          <form class="modal-content animate" action="/action_page.php" method="post">
-                            <div class="imgcontainer">
-                              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                              <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddh0eaj-8dacbb07-48ef-4186-9426-fdc7df84c528.png/v1/fill/w_200,h_200,q_70,strp/paralolz_net_paralogin__login_logo__by_paralolzltd_art_ddh0eaj-200h.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzUwIiwicGF0aCI6IlwvZlwvYTQ0MzcyOGEtZjM4ZS00NmFjLTk5YTUtYTMyZDI3NjQ1NzU5XC9kZGgwZWFqLThkYWNiYjA3LTQ4ZWYtNDE4Ni05NDI2LWZkYzdkZjg0YzUyOC5wbmciLCJ3aWR0aCI6Ijw9NzUwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.YLkRvXc7TAmAGSJOS-tq9X_z5HSeABnfuWqlVOKoiU4" alt="Avatar" class="avatar" title="My Account">
-                            </div>
-                        
-                            <div class="container">
-                              <label for="uname"><b>Username</b></label>
-                              <input type="text" placeholder="Enter Username" name="uname" required>
-                        
-                              <label for="psw"><b>Password</b></label>
-                              <input type="password" placeholder="Enter Password" name="psw" required>
-                                
-                              <button type="submit">Login</button>
-                              <label>
-                                <input type="checkbox" checked="checked" name="remember"> Remember me
-                              </label>
-                            </div>
-                        
-                            <div class="container" style="background-color:#f1f1f1">
-                              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                              <span class="psw">Forgot <a href="#">password?</a></span>
-                            </div>
-                          </form>
-                        </div>
                         <div class="dropdown">
                             <li><a href="index.html">HOME</a></li>
-                            <div class="dropdown-content">
-                                <a href="#">About ParaLolz</a>
-                                <a href="#">TOP! Featured</a>
-                                <a href="#">ChronoNEWS</a>
-                            </div>
                         </div>
+                        </button>
+                        <button class="dropbtn">
                         <div class="dropdown">
                             <li><a href="portfolio.html">PORTFOLIO</a></li>
-                            <div class="dropdown-content">
-                                <a href="#">PlatformWave</a>
-                                <a href="#">More About Me</a>
-                            </div>
                         </div>
+                        </button>
+                        <button class="dropbtn">
                         <div class="dropdown">
                             <li><a href="artgallery.html">ART GALLERY</a></li>
                             <div class="dropdown-content">  
                                 <a href="neonexus.html">NEONEXUS</a>
                             </div>
                         </div>
+                        </button>
+                        <button class="dropbtn">
                         <div class="dropdown">
                             <li><a href="auvi.html">AUVI</a></li>
-                            <div class="dropdown-content">
-                                <a href="#">VDO</a>
-                                <a href="#">FONiX</a>
-                                <a href="#">MediaShare.ware</a>
-                            </div>
                         </div>
+                        </button>
+                        <button class="dropbtn">
                         <div class="dropdown">
                             <li><a href="forumsfaq.html">FORUMS/FAQ's</a></li>
                             </div>
+                        </button>
+                        <button class="dropbtn">
                         <div class="dropdown">
                             <li><a href="contactinfo.html">CONTACT INFO</a></li>
                         </div>
+                        </button>
                         <form>
                             <button type="submit"><i class="fa fa-search"></i></button>
                             <input type="text" name="search" placeholder="Search..">
                         </form>
-                        </button>
                     </ul>
                 </nav>
                 <main>
@@ -688,6 +687,26 @@
         function topFunction() {
           document.body.scrollTop = 0;
           document.documentElement.scrollTop = 0;
+        }
+        
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
         }
         </script>
     </body>
