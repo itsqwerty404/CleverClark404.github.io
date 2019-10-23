@@ -2,8 +2,9 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Bouncing Box</title>
+	<title>クリック ᛫ ディスク</title>
 	<script src="jquery.min.js"></script>
+	<link rel="icon" href="CD-GIF.ico" />
 
 <!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 
@@ -11,41 +12,134 @@
 	<style>
 		/* TODO 1 */
 		.box {
-			width: 70px;
-			height: 70px;
+			width: 100px;
+			height: 100px;
 			background-color: none;
-			background-image: url("https://making-the-web.com/sites/default/files/clipart/175398/compact-disk-png-transparent-images-175398-3486504.png");
-			background-size: 70px 70px;
+			background-image: url("CD-GIF.gif");
+			background-size: 100px 100px;
 			background-repeat: no-repeat;
-			font-size: 300%;
+			font-size: 4.4em;
 			color: white;
-			font-family: Broadway, serif;
+			font-family: Simsun, serif;
 			text-align: center;
 			display: block;
 			position: absolute;
-			top: 100px;
-			left: 0;
+			top: 50px;
+			user-select: none;
 		}
 		
-		body  {
+		.glitch {
+            font-size: 2.2em;
+            line-height: 2;
+            font-family: Simsun;
+            font-weight: 700;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-bottom: 100px;
+            text-decoration: none;
+            color: hotpink;
+            user-select: none;
+        }
+        .glitch::before { 
+                display: block;
+                content: 'Have You Met The Chairman?';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                opacity: .8;   
+                color: yellow;
+                z-index: -1;
+        }
+        .glitch::after {   
+                display: block;
+                content: 'Have You Met The Chairman?';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                opacity: .8;    
+                color: blue;
+                z-index: -2;
+        }
+        @keyframes glitch {
+            0% {
+                transform: translate(0)
+            }
+            20% {
+                transform: translate(-5px, 5px)
+            }
+            40% {
+                transform: translate(-5px, -5px)
+            }
+            60% {
+                transform: translate(5px, 5px)
+            }
+            80% {
+                transform: translate(5px, -5px)
+            }
+            to {
+                transform: translate(0)
+            }
+        }
+        .glitch:hover::before {
+                    animation: glitch .3s cubic-bezier(.25, .46, .45, .94) both infinite
+        }
+        .glitch:hover::after {
+                    animation: glitch .3s cubic-bezier(.25, .46, .45, .94) reverse both infinite
+        }
+		
+		.board  {
 		    /* The image used */
-          background-image: url("https://i.ytimg.com/vi/tNkZsRW7h2c/maxresdefault.jpg");
+          background-image: url("CDTV.gif");
+          background-color: blue;
         
           /* Full height */
           height: 100%;
+          max-width: 100%;
         
           /* Center and scale the image nicely */
-          background-position: auto;
+          background-position: center;
+          background-attachment: fixed;
           background-repeat: no-repeat;
-          background-size: cover;
+          background-size: 100% 100%;
 		}
+		
+		p1 {
+		    font-family: MS Gothic;
+		    font-style: oblique;
+		    color: white;
+		    font-size: 100%;
+		    width: 100%;
+		    text-shadow: 2px 2px black;
+		    position: relative;
+		    user-select: none;
+		}
+		
+		p2 {
+		    font-family: Simsun;
+		    font-size: 5.5em;
+		    font-weight: bolder;
+		    color: white;
+		    padding: 300px;
+		    position: top 25%;
+		    user-select: none;
+		}
+		
 	</style>
 
 </head>
 <body class="board">
-	<!-- HTML for the box -->
+    <iframe style="border: 0; width: 250px; height: 250px;" src="https://bandcamp.com/EmbeddedPlayer/album=2913501890/size=large/bgcol=ffffff/linkcol=f171a2/minimal=true/transparent=true/" seamless><a href="http://vektroid.bandcamp.com/album/new-dreams-ltd">New Dreams Ltd. by Laserdisc Visions</a></iframe>
+    <!-- HTML for the box -->
+	<p1><div class="glitch">Have You Met The Chairman?</div></p1>
+	
 	<div class="box">0</div>
-
+    
 	<!-- BEGIN JAVASCRIPT -->
 	<script>
 		(function(){
@@ -64,6 +158,8 @@
             var direction = 1;
             var positionY = 0;
             var directionY = 1;
+            var clickGoal = 10;
+            var imgPopup = ("PizzaPyramid.gif");
             box.css('left', position);      // moves the box to the x-coordinate of <position> 
             box.css('top', positionY);
             box.text(points);               // changes the text of the box to display the value of <points>
@@ -74,7 +170,7 @@
                 positionY += speed * directionY;
                 console.log("new position: " + position);
                 
-                if(position +65 > boardWidth) {
+                if(position +100 > boardWidth) {
                     console.log("Right Wall Hit");
                     direction = -1;
                     console.log(direction);
@@ -84,10 +180,9 @@
                     console.log("Left Wall Hit");
                     direction = 1;
                     console.log(direction);
-                    
                 }
                 
-                if(positionY +65 > boardHeight) {
+                if(positionY +100 > boardHeight) {
                     console.log("Bottom Wall Hit");
                     directionY = -1;
                     console.log(direction);
@@ -97,30 +192,34 @@
                     console.log("Top Wall Hit");
                     directionY = 1;
                     console.log(direction);
-                    
                 }
                 
                 box.css('left', position);      // set the 'left' CSS property of the box to the new value of position
                 box.css('top', positionY);
             }
 
-
-			
 			function handleBoxClick() {
 				// TODO 4 / 5
 				points += 1;           // increase the point total
                 box.text(points);      // update the new points total displayed by the box
                 position = Math.random() * boardWidth;         // reset the position of the box to 0
                 positionY = Math.random() * boardHeight;
-                speed += 3;    // increase the speed of the box on every click
+                speed += 1;    // increase the speed of the box on every click
+			    
+			    if(points === clickGoal) {
+			        
+			    }
 			};
-
 
 			//this executes the update function code every 50 milliseconds
 			setInterval(update, 50);
 			// this executes the handleBoxClick function code every time the box is clicked on
 			box.on('click', handleBoxClick);
 		})();
+		
+		function goBack() {
+          window.history.back()
+        }
 	</script>
 </body>
 </html>
