@@ -49,13 +49,11 @@
         text-shadow: none;
     }
     
-    div.fontstr {
-        font-stretch: ultra-condensed
-    }
-    
     p3  {
         text-align: center;
         color: blue;
+        font-family: Times New Roman, serif;
+        font-size: 35px;
     }
     
     p4  {
@@ -75,7 +73,7 @@
 
     li a {
         display: block;
-        color: white;
+        color: blue;
         text-align: justify;
         padding: 10px 55px;
         text-decoration: none;
@@ -83,7 +81,7 @@
 
     li a:hover {
         background-color: grey;
-        color: #505050;
+        color: white;
     }
     
     body {
@@ -184,7 +182,7 @@
             
             .topnav a.active {
               background-color: #ddd;
-              color: green;
+              color: blue;
               text-shadow: 0 2px black;
               background-image: url("Clear_rainbow.png");
               background-size: 100% 400%;
@@ -423,6 +421,37 @@
             ul {
                 list-style: none;
             }
+            
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+            
+            ol li {
+                display: inline-block;
+                vertical-align: top;
+                padding: 1em 3em;
+                
+                margin-right: -4px;
+                border-bottom: 1px solid black;
+                position: relative;
+            }
+            ol li a:hover:after {
+                content: ' ';
+                display: block;
+                height: 16px;
+                width: 16px;
+                background: white;
+                position: absolute;
+                left: 50%;
+                margin-left: -8px;
+                transform: rotate(45deg);
+                bottom:-9px;
+                border-left: 1px solid black;
+                border-top: 1px solid black;
+            }
+
     
     #grad1 {
       height: 200px;
@@ -451,6 +480,21 @@
     #paralogo:hover {
       -webkit-transform: rotate(360deg);
               transform: rotate(360deg);
+    }
+
+    .undcon {
+        max-width: 5%;
+        height: auto;
+        transition: all 0.5s ease-in-out;
+    }
+    
+    .undcon:hover {
+        background-image: url("Clear_rainbow.png");
+        background-repeat: repeat;
+        background-size: contain;
+        background-position: center;
+        max-width: 15%;
+        height: auto;
     }
 
     /* Footer */
@@ -509,7 +553,7 @@
                             <input type="text" name="search" placeholder="Search..">
                         </form>
                     </ul>
-                    <img src="under-construction.gif" style="max-width:10%; height:auto">
+                    <img src="under-construction.gif" class="undcon">
                 </div>
            </nav>
          <div class="all-contents">
@@ -526,6 +570,15 @@
           </div>
           <div class="side">
           <div class="row">
+            <p3>SELECT A CATAGORY</p3>
+            <div class="img-list-url">
+            <ol>
+                <li><a href="digital-art.html">DIGITAL</a></li>
+                <li><a href="literature-art.html">LITERATURE</a></li>
+                <li><a href="photography-art.html">PHOTOGRAPHY</a></li>
+                <li><a href="misc-art.html">MISCELLANEOUS</a></li>
+            </ol>
+            </div>
                 <img src="https://myrealdomain.com/images/anubis-symbol.png" title="Anubis: Egyptian God of the Dead" alt="Anubis">
                 <img src="https://starofdavidsite.files.wordpress.com/2016/04/hexagramcolo.jpg?w=400" title="The Star of David w/the 7 Metal Elements of Antiquity" alt="Star of David">
                 <img src="http://thumb4.zeppy.io/d/l400/pict/163792653659/vintage-symphonic-vcr-tv-combo-retro-gaming-crt-tube-av-in-13-color-with-remote" title="A CRT (Cathode-Ray Tube) Television from the 80s" alt="80s CRT TV">

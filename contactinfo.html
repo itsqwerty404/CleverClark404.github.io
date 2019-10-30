@@ -221,7 +221,7 @@
             
             .topnav a.active {
               background-color: #ddd;
-              color: green;
+              color: blue;
               text-shadow: 0 2px black;
               background-image: url("Clear_rainbow.png");
               background-size: 100% 400%;
@@ -460,6 +460,12 @@
             ul {
                 list-style: none;
             }
+            
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
     
     #paralogo {
       -webkit-transition: -webkit-transform 1s ease-in-out;
@@ -468,6 +474,21 @@
     #paralogo:hover {
       -webkit-transform: rotate(360deg);
               transform: rotate(360deg);
+    }
+    
+    .undcon {
+        max-width: 5%;
+        height: auto;
+        transition: all 0.5s ease-in-out;
+    }
+    
+    .undcon:hover {
+        background-image: url("Clear_rainbow.png");
+        background-repeat: repeat;
+        background-size: contain;
+        background-position: center;
+        max-width: 15%;
+        height: auto;
     }
     
     /* Footer */
@@ -526,7 +547,7 @@
                             <input type="text" name="search" placeholder="Search..">
                         </form>
                     </ul>
-                    <img src="under-construction.gif" style="max-width:10%; height:auto">
+                    <img src="under-construction.gif" class="undcon">
                 </div>
                 </nav>
     <div class="all-contents">
