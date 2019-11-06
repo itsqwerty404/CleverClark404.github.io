@@ -10,8 +10,8 @@
         <style type="text/css">
             /* Style the header */
             .header {
-                background-color: blue;
-                padding: 20px;
+                background-color: none;
+                padding: 0;
                 text-align: center;
             }
             
@@ -156,6 +156,12 @@
                 text-shadow: 1px 0 20px blue;
             }
             
+            .heading {
+              color: #eee;
+              font-size: 4em;
+              font-weight: 300;
+            }
+            
             /* Style the header */
             .header group {
                 padding: 50px;
@@ -192,7 +198,7 @@
                 height: auto;
             }
             html {
-                background: url(paragrid.gif) no-repeat center fixed; 
+                background: url("https://steamuserimages-a.akamaihd.net/ugc/951857668148675039/DEE6B85887DB25E1C531CC813CE37D2231936DD8/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true") no-repeat center fixed; 
                 background-size: cover;
             }
         
@@ -492,15 +498,11 @@
                 background-image: linear-gradient(to right, transparent, white); /* Standard syntax (must be last) */
             }
             
-            img {
-                padding: 5px;
-                width: 150px;
-            }
-            
             #paralogo {
               -webkit-transition: -webkit-transform 1s ease-in-out;
                       transition:         transform 1s ease-in-out;
             }
+            
             #paralogo:hover {
               -webkit-transform: rotate(360deg);
                       transform: rotate(360deg);
@@ -595,9 +597,9 @@
                             <li><a href="contactinfo.html">CONTACT INFO</a></li>
                         </div>
                         </button>
-                        <a href="javascript:void(0);" class="icon" onclick="iconOpen()">
-                            <i class="fa fa-bars"></i>
-                        </a>
+                        <button class="dropbtn">
+                        <i class="fa fa-bars"></i>
+                        </button>
                         <form>
                             <button type="submit"><i class="fa fa-search"></i></button>
                             <input type="text" name="search" placeholder="Search..">
@@ -607,9 +609,9 @@
                 </div>
            </nav>
         <div class="all-contents">
-                <div class="img-with-text">
+                <div class="header">
                 <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddgm2b7-1bd32a52-31d9-47c1-b49c-698d9f45563f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E0NDM3MjhhLWYzOGUtNDZhYy05OWE1LWEzMmQyNzY0NTc1OVwvZGRnbTJiNy0xYmQzMmE1Mi0zMWQ5LTQ3YzEtYjQ5Yy02OThkOWY0NTU2M2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.41P1rfcbhEjp3CsxngyoDr0Lrg8wk4jOvAVCllEqdEI" alt="LOGO" id="paralogo" title="paralolz.net">
-                <header4>paralolz.net</header4>
+                <header4 class="heading" data-target-resolver></header4>
                 <p class="text">
                 <p2>Connect, Create, Communicate™</p2>
                 </p>
@@ -640,4 +642,105 @@
         </div>
         </div>
     </body>
+    <script>
+    const resolver = {
+          resolve: function resolve(options, callback) {
+            // The string to resolve
+            const resolveString = options.resolveString || options.element.getAttribute('data-target-resolver');
+            const combinedOptions = Object.assign({}, options, {resolveString: resolveString});
+            
+            function getRandomInteger(min, max) {
+              return Math.floor(Math.random() * (max - min + 1)) + min;
+            };
+            
+            function randomCharacter(characters) {
+              return characters[getRandomInteger(0, characters.length - 1)];
+            };
+            
+            function doRandomiserEffect(options, callback) {
+              const characters = options.characters;
+              const timeout = options.timeout;
+              const element = options.element;
+              const partialString = options.partialString;
+        
+              let iterations = options.iterations;
+        
+              setTimeout(() => {
+                if (iterations >= 0) {
+                  const nextOptions = Object.assign({}, options, {iterations: iterations - 1});
+        
+                  // Ensures partialString without the random character as the final state.
+                  if (iterations === 0) {
+                    element.textContent = partialString;
+                  } else {
+                    // Replaces the last character of partialString with a random character
+                    element.textContent = partialString.substring(0, partialString.length - 1) + randomCharacter(characters);
+                  }
+        
+                  doRandomiserEffect(nextOptions, callback)
+                } else if (typeof callback === "function") {
+                  callback(); 
+                }
+              }, options.timeout);
+            };
+            
+            function doResolverEffect(options, callback) {
+              const resolveString = options.resolveString;
+              const characters = options.characters;
+              const offset = options.offset;
+              const partialString = resolveString.substring(0, offset);
+              const combinedOptions = Object.assign({}, options, {partialString: partialString});
+        
+              doRandomiserEffect(combinedOptions, () => {
+                const nextOptions = Object.assign({}, options, {offset: offset + 1});
+        
+                if (offset <= resolveString.length) {
+                  doResolverEffect(nextOptions, callback);
+                } else if (typeof callback === "function") {
+                  callback();
+                }
+              });
+            };
+        
+            doResolverEffect(combinedOptions, callback);
+          } 
+        }
+
+        const strings = [
+          'paralolz.net'
+        ];
+        
+        let counter = 0;
+        
+        const options = {
+          // Initial position
+          offset: 0,
+          // Timeout between each random character
+          timeout: 5,
+          // Number of random characters to show
+          iterations: 5,
+          // Random characters to pick from
+          characters: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'y', 'x', '#', '%', '&', '-', '+', '_', '?', '/', '\\', '='],
+          // String to resolve
+          resolveString: strings[counter],
+          // The element
+          element: document.querySelector('[data-target-resolver]')
+        }
+        
+        // Callback function when resolve completes
+        function callback() {
+          setTimeout(() => {
+            counter ++;
+            
+            if (counter >= strings.length) {
+              counter = 0;
+            }
+            
+            let nextOptions = Object.assign({}, options, {resolveString: strings[counter]});
+            
+          }, 1000);
+        }
+        
+        resolver.resolve(options, callback);
+    </script>
 </html>

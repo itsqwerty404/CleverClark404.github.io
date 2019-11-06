@@ -8,12 +8,12 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
     <link rel="icon" href="paraicon.ico" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-    <style>
+    <style> 
     /* Style the header */
     
     .header {
-        background-color: blue;
-        padding: 20px;
+        background-color: none;
+        padding: 0;
         text-align: center;
     }
 
@@ -124,11 +124,12 @@
     body {
         color: white;
         background-color: none;
-        padding: 0 100px;
+        padding: 0;
         font-family: 'Aldrich';
         font-size: 16px;
-        text-align: justify;
+        text-align: center;
         margin-top: 100px;
+
     }
     
     header4 {
@@ -149,6 +150,12 @@
         text-shadow: 1px 0 20px blue;
     }
     
+    .heading {
+      color: #eee;
+      font-size: 4em;
+      font-weight: 300;
+    }
+    
     /* Style the header */
     .header group {
         padding: 50px;
@@ -159,7 +166,7 @@
     
     /* Increase the font size of the h1 element */
     .header  {
-        font-size: 40px;
+        font-size: 25px;
     }
     
     p3 pos  {
@@ -175,7 +182,7 @@
         height: auto;
     }
     html {
-        background: url(paragrid.gif) no-repeat center fixed; 
+        background: url("https://steamuserimages-a.akamaihd.net/ugc/951857668148675039/DEE6B85887DB25E1C531CC813CE37D2231936DD8/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true") no-repeat center fixed; 
         background-size: cover;
     }
     
@@ -276,9 +283,10 @@
         padding: 0;
         position: fixed;
         top: 0;
-        width: 100%;
+        max-width: 100%;
         display: block;
         text-align: center;
+        height: auto;
     }
     
     nav header {
@@ -385,19 +393,43 @@
       box-sizing: border-box;
     }
     
-    .container {
-      padding: 50px 150px 50px 500px;
-    }
-    
     span.psw {
       float: right;
       color: blue;
       padding-top: 16px;
     }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* Create three equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 15px;
+      background: white;
+      border: 7px solid grey;
+      color: blue;
+    }
 
     /* Column container */
     .row {  
       display: block;
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media screen and (max-width:600px) {
+      .column {
+        width: 100%;
+      }
     }
     
     /* Create two unequal columns that sits next to each other */
@@ -418,7 +450,7 @@
       color: blue;
       width: 100%;
     }
-    .menuitem {
+    .menu item {
       padding: 8px;
       margin-top: 7px;
       border-bottom: 1px solid black;
@@ -555,9 +587,9 @@
                             <li><a href="contactinfo.html">CONTACT INFO</a></li>
                         </div>
                         </button>
-                        <a href="javascript:void(0);" class="icon" onclick="iconOpen()">
-                            <i class="fa fa-bars"></i>
-                        </a>
+                        <button class="dropbtn">
+                        <i class="fa fa-bars"></i>
+                        </button>
                         <form>
                             <button type="submit"><i class="fa fa-search"></i></button>
                             <input type="text" name="search" placeholder="Search..">
@@ -568,18 +600,15 @@
                 </nav>
     <div class="all-contents">
             <button onclick="topFunction()" id="myBtn" title="Go to top">TOP</button>
-                    <div class="img-with-text">
-                        <img src="WelcomeGlobe.gif" alt="Welcome">
+                    <div class="header">
                         <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddgm2b7-1bd32a52-31d9-47c1-b49c-698d9f45563f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E0NDM3MjhhLWYzOGUtNDZhYy05OWE1LWEzMmQyNzY0NTc1OVwvZGRnbTJiNy0xYmQzMmE1Mi0zMWQ5LTQ3YzEtYjQ5Yy02OThkOWY0NTU2M2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.41P1rfcbhEjp3CsxngyoDr0Lrg8wk4jOvAVCllEqdEI" alt="LOGO" id="paralogo" title="paralolz.net">
-                        <img src="WelcomeGlobe.gif" alt="Welcome">
+                        <header4 class="heading" data-target-resolver></header4>
+                        <p class="text">
+                        <p2>Connect, Create, Communicate™</p2>
+                        </p>
                     </div>
-                <header4>paralolz.net</header4>
-                <p class="text">
-                <p2>Connect, Create, Communicate™</p2>
-                </p>
-                <main>
-                <div class="main">
-                  <div class="menu">
+                <div class="row">
+                  <div class="column">
                     <h1>Welcome to ParaLolz.net! :D</h1>
                     <h2>About ParaLolz</h2>
                     <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddfy9zy-1de1c407-1c4f-48f2-9afe-68971d273eca.png/v1/fill/w_400,h_162,strp/paralolz_studios__ltd__banner_logo_1__by_paralolzltd_art_ddfy9zy-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTYyIiwicGF0aCI6IlwvZlwvYTQ0MzcyOGEtZjM4ZS00NmFjLTk5YTUtYTMyZDI3NjQ1NzU5XC9kZGZ5OXp5LTFkZTFjNDA3LTFjNGYtNDhmMi05YWZlLTY4OTcxZDI3M2VjYS5wbmciLCJ3aWR0aCI6Ijw9NDAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.hgeob0Xtv7n5JtgAdBANg3I7ITigTg8h1S6zkC7x1yo" alt="ParaLolz Studios, Ltd.">
@@ -592,10 +621,7 @@
                     </div>
                   </div>
                   </div>
-                  </div>
-                </main>
-                  <div class="main">
-                  <div class="right">
+                  <div class="column">
                     <h1>
                     <p6>TOP!</p6>
                     <p7>Featured</p7></h1>
@@ -614,9 +640,7 @@
                                 <p3>Then comes in "Dual". I like this track a lot, with the only gripe of it being that it's very shortlived. :(</p3>
                                     <p3>"Idgaf Island", a rather touching tongue-in-cheek name for a track, starts playing. If you haven't already guessed it by now, some of these tracks are rather short and repetitive with seemingly no real addage other than the Jap-comm mix in the background. I guess that would act as a bit of a distraction for the ears if Ramona thought that her tracks weren't good enough already, but, eh. What can you do, anyhow?</p3>
                             </div>
-                        </div>
-                    <div class="main">
-                    <div class="right">
+                    <div class="column">
                     <h1>ChronoNEWS</h1>
                     <h5>Where EveryTime There's Something New</h5>
                     <img src=https://i.ytimg.com/vi/hirJZ--n9t0/hqdefault.jpg alt="NEWS">
@@ -632,11 +656,11 @@
                         <header4 class="text">QWERTY4</header4>
                         <header>Vaporwave Webpunk Artist</header>
                             <p5>Interests</p5>
-                            <ul>
+                            <ol>
                                 <li>Web Design</li>
                                 <li>Artistic Storytelling</li>
                                 <li>Retrofuturism & Vaporwave</li>
-                            </ul>
+                            </ol>
                     </section>
                 </div>
             </main>     
@@ -674,6 +698,106 @@
             x.className = "topnav";
           }
         }
+        
+        const resolver = {
+          resolve: function resolve(options, callback) {
+            // The string to resolve
+            const resolveString = options.resolveString || options.element.getAttribute('data-target-resolver');
+            const combinedOptions = Object.assign({}, options, {resolveString: resolveString});
+            
+            function getRandomInteger(min, max) {
+              return Math.floor(Math.random() * (max - min + 1)) + min;
+            };
+            
+            function randomCharacter(characters) {
+              return characters[getRandomInteger(0, characters.length - 1)];
+            };
+            
+            function doRandomiserEffect(options, callback) {
+              const characters = options.characters;
+              const timeout = options.timeout;
+              const element = options.element;
+              const partialString = options.partialString;
+        
+              let iterations = options.iterations;
+        
+              setTimeout(() => {
+                if (iterations >= 0) {
+                  const nextOptions = Object.assign({}, options, {iterations: iterations - 1});
+        
+                  // Ensures partialString without the random character as the final state.
+                  if (iterations === 0) {
+                    element.textContent = partialString;
+                  } else {
+                    // Replaces the last character of partialString with a random character
+                    element.textContent = partialString.substring(0, partialString.length - 1) + randomCharacter(characters);
+                  }
+        
+                  doRandomiserEffect(nextOptions, callback)
+                } else if (typeof callback === "function") {
+                  callback(); 
+                }
+              }, options.timeout);
+            };
+            
+            function doResolverEffect(options, callback) {
+              const resolveString = options.resolveString;
+              const characters = options.characters;
+              const offset = options.offset;
+              const partialString = resolveString.substring(0, offset);
+              const combinedOptions = Object.assign({}, options, {partialString: partialString});
+        
+              doRandomiserEffect(combinedOptions, () => {
+                const nextOptions = Object.assign({}, options, {offset: offset + 1});
+        
+                if (offset <= resolveString.length) {
+                  doResolverEffect(nextOptions, callback);
+                } else if (typeof callback === "function") {
+                  callback();
+                }
+              });
+            };
+        
+            doResolverEffect(combinedOptions, callback);
+          } 
+        }
+
+        const strings = [
+          'paralolz.net'
+        ];
+        
+        let counter = 0;
+        
+        const options = {
+          // Initial position
+          offset: 0,
+          // Timeout between each random character
+          timeout: 5,
+          // Number of random characters to show
+          iterations: 5,
+          // Random characters to pick from
+          characters: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'y', 'x', '#', '%', '&', '-', '+', '_', '?', '/', '\\', '='],
+          // String to resolve
+          resolveString: strings[counter],
+          // The element
+          element: document.querySelector('[data-target-resolver]')
+        }
+        
+        // Callback function when resolve completes
+        function callback() {
+          setTimeout(() => {
+            counter ++;
+            
+            if (counter >= strings.length) {
+              counter = 0;
+            }
+            
+            let nextOptions = Object.assign({}, options, {resolveString: strings[counter]});
+            
+          }, 1000);
+        }
+        
+        resolver.resolve(options, callback);
         </script>
     </body>
 </html>
