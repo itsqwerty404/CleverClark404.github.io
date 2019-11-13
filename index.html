@@ -64,6 +64,9 @@
     p4  {
         text-align: center;
         color: blue;
+        font-family: Helvetica, serif;
+        font-weight: bold;
+        font-size: 1.3em;
     }
     
     p5  {
@@ -126,28 +129,35 @@
         background-color: none;
         padding: 0;
         font-family: 'Aldrich';
-        font-size: 16px;
+        font-size: 25px;
         text-align: center;
         margin-top: 100px;
-
     }
     
-    header4 {
-        font-size: 4em;
-        font-family: 'Orbitron';
-        text-shadow: 4px 5px black;
-        font-weight: bold;
-        text-align: center;
-        width: auto;
-        transition: all 0.3s ease-in;
-        text-decoration: none;
+    @font-face {
+      font-size: 4em;
+      font-family: myFirstFont;
+      src: url("font-faces/Boomeraction.ttf");
+      text-shadow: 4px 5px black;
+      font-weight: bold;
+      text-align: center;
+      width: auto;
+      transition: all 0.3s ease-in;
+      text-decoration: none;
+      z-index: 1;
     }
     
-    header4:hover {
+    .boomer {
+      font-family: myFirstFont;
+      transition: all 0.3s ease-in;
+    }
+    
+    .boomer:hover {
         -webkit-stroke-width: 5.3px;
         -webkit-stroke-color: #FFFFFF;
         -webkit-fill-color: #FFFFFF;
         text-shadow: 1px 0 20px blue;
+        z-index: 1;
     }
     
     .heading {
@@ -199,7 +209,10 @@
       color: red;
       cursor: pointer;
       padding: 15px;
-      background-color: white;
+      background-image: url("https://media.giphy.com/media/3oFzmjNIrprRhjfxpm/giphy.gif");
+      background-position: bottom;
+      background-size: 100% 100%, cover;
+      background-repeat: no-repeat;
       transition: all 0.3s ease-in-out;
     }
     
@@ -208,7 +221,7 @@
       color: white;
       background-image: url("rainbow-2.gif");
       background-size: 100% 400%;
-      background-position: top;
+      background-position: bottom;
       background-repeat: no-repeat;
       transition: all 0.3s ease-in-out;
     }
@@ -219,6 +232,7 @@
       position: fixed;
       top: 0;
       width: 100%;
+      z-index: 2;
     }
     
     .topnav a {
@@ -295,15 +309,21 @@
         color: rgb(255, 255, 255);
     }
     
-    /* Style The Dropdown Button */
+    @font-face {
+        font-family: fourMusic;
+        src: url("font-faces/4Music.ttf");
+        background: grey;
+        color: white;
+        padding: 0;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+    }
+    
     .dropbtn {
-      background: grey;
-      color: white;
-      padding: 0;
-      font-family: 'Aldrich';
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
+        background-color: transparent;
+        border: none;
     }
     
     .dropbtn a:hover {
@@ -374,6 +394,7 @@
         text-decoration: none;
         color: white;
         transition: all 0.3s ease-in;
+        font-family: fourMusic;
     }
     
     nav a:hover {
@@ -406,22 +427,24 @@
     /* Create three equal columns that floats next to each other */
     .column {
       float: left;
-      width: 33.33%;
-      padding: 15px;
+      width: 100vh;
+      padding: 5vh;
       background: white;
       border: 7px solid grey;
       color: blue;
+      margin-top: 50px;
     }
 
     /* Column container */
     .row {  
-      display: block;
+      display: inline-grid;
+      
     }
     
     /* Clear floats after the columns */
     .row:after {
       content: "";
-      display: table;
+      display: table-row;
       clear: both;
     }
     
@@ -507,26 +530,32 @@
     
     #paralogo {
       -webkit-transition: -webkit-transform 1s ease-in-out;
-              transition:         transform 1s ease-in-out;
+      -webkit-transition: 1s linear;
+      -webkit-transform-style: preserve-3d;
     }
+    
+    /* The animation code */
+    @keyframes example {
+      from {opacity: inherit;}
+      to {opacity: 0.5;}
+    }
+        
     #paralogo:hover {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
+        animation-name: example;
+        animation-duration: 1s;
+        transition: ease-in-out;
     }
     
     .undcon {
         max-width: 5%;
         height: auto;
-        transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
     }
     
     .undcon:hover {
-        background-image: url("Clear_rainbow.png");
-        background-repeat: repeat;
-        background-size: contain;
-        background-position: center;
         max-width: 15%;
         height: auto;
+      transition: all 0.5s ease-in-out;
     }
 
     ul {
@@ -541,16 +570,22 @@
     
     /* Footer */
     .footer {
-        padding: 0;
         font-size: 10px;
         color: blue;
+        background: grey;
+        padding: 15px;
+        position: relative;
+        bottom: 0;
+        max-width: 100%;
+        display: block;
         text-align: center;
-        background: none;
+        height: auto;
     }
     </style>
         <title>paralolz.net</title>
     </head>
         <body>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">TOP</button>
             <nav>
                 <div class="topnav" id="myTopnav">
                     <ul>
@@ -579,7 +614,7 @@
                         </button>
                         <button class="dropbtn">
                         <div class="dropdown">
-                            <li><a href="forumsfaq.html">FORUMS/FAQ's</a></li>
+                            <li><a href="forumsfaq.html">FORUMS AND FAQs</a></li>
                             </div>
                         </button>
                         <button class="dropbtn">
@@ -602,7 +637,9 @@
             <button onclick="topFunction()" id="myBtn" title="Go to top">TOP</button>
                     <div class="header">
                         <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddgm2b7-1bd32a52-31d9-47c1-b49c-698d9f45563f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E0NDM3MjhhLWYzOGUtNDZhYy05OWE1LWEzMmQyNzY0NTc1OVwvZGRnbTJiNy0xYmQzMmE1Mi0zMWQ5LTQ3YzEtYjQ5Yy02OThkOWY0NTU2M2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.41P1rfcbhEjp3CsxngyoDr0Lrg8wk4jOvAVCllEqdEI" alt="LOGO" id="paralogo" title="paralolz.net">
-                        <header4 class="heading" data-target-resolver></header4>
+                        <div class="boomer">
+                        <boomer class="heading" data-target-resolver></boomer>
+                        </div>
                         <p class="text">
                         <p2>Connect, Create, Communicate™</p2>
                         </p>
@@ -615,9 +652,12 @@
                         <div class="interests">
                         <div class="para">
                         <p3>At ParaLolz, we ensure & guarantee safety, harmony & unity in the face of adversity by sharing each others' thoughts, opinions, works & creations to the world.<br>
-                        <br>On here, you can choose to create music, play games like PlatformWave in my Portfolio section, as well as view and share art and creations with others either for fun or for criticism.<br> Either way, it's YOUR experience. :3</p3>
+                        <br>On here, you can choose to create music, play games like PlatformWave in my Portfolio section, as well as view and share art and creations with others either for fun or for criticism.</p3>
+                        <br><p7> Either way, it's YOUR experience. :3</p7>
+                    <hr>
                     <h2>Thank you for choosing to visit ParaLolz.net</h2>
-                    <p4>Enjoy your stay.</p4><br><br>
+                    <hr>
+                    <div class="boomer">Enjoy your stay.</div><br>
                     </div>
                   </div>
                   </div>
@@ -630,10 +670,11 @@
                     <section class="section">
                     <br><p3>Honestly, what can I say about this album that hasn't already been said before?</p3>
                     <br><p3>Yes, this IS a precursor to Vektroid's delving into the vaporwave scene.
-                    But, that doesn't necessarily mean that it's automatically considered good by default.
-                    Firstly, let's talk about the contents within the album.</p3>
+                    But, that doesn't necessarily mean that it's automatically considered good by default.</p3><br>
+                    <p4>Firstly, let's talk about the contents within the album.</p4>
                     </section>
-                    <h2>THE CONTENTS</h2>
+                    <hr>
+                    <h1>THE CONTENTS</h1>
                     <p3>We start off with a rather hazy track: "Mind Access".</p3>
                         <p3>It's actually rather soothing to listen to in the short span of a minute or two. It's a simple sampling repetition of "(JINGLE) Pia Over" by Naofumi Hataya, one of many composers I assume of the game NiGHTS Into Dreams. It's a simple, yet effective way of introducing this odd segahaze vaporwave album.</p3>
                             <p3>"Malls" then begins to play. This time with a rather intriguing mix of Japanese commercials overlayed by what sounds like something you'd hear in an actual mall. Or in actual 'malls', I guess you would say. Lol.</p3>
@@ -666,6 +707,7 @@
             </main>     
         </div>
         <!-- Footer -->
+        <hr>
         <div class="footer">
             <h3>Copyright 2019 | All Rights Reserved | Paralolz Studios, Ltd.</h3>
         </div>
@@ -688,15 +730,6 @@
         function topFunction() {
           document.body.scrollTop = 0;
           document.documentElement.scrollTop = 0;
-        }
-        
-        function iconOpen() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
         }
         
         const resolver = {

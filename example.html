@@ -14,6 +14,30 @@
     	margin: auto;
     	padding: 0;
     }
+    
+    .MainContainer {
+      perspective: 1px;
+      transform-style: preserve-3d;
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+    
+    .ParallaxContainer {
+      display: flex;
+      flex: 1 0 auto;
+      position: relative;
+      height: 100vh;
+      transform: translateZ(-1px) scale(2);
+      z-index: -1;
+    }
+    
+    .ContentContainer {
+      display: block;
+      position: relative;
+      background-color: white;
+      z-index: 1;
+    }
     </style>
     <title>example</title>
 </head>
@@ -23,6 +47,18 @@
         <script type="text/javascript" src="https://scmplayer.co/script.js" 
         data-config="{'skin':'skins/cyber/skin.css','volume':50,'autoplay':false,'shuffle':false,'repeat':1,'placement':'bottom','showplaylist':false,'playlist':[{'title':'HOME - Resonance','url':'https://youtu.be/8GW6sLrK40k'},{'title':'Saint Pepsi - Private Caller','url':'https://youtu.be/Ki-fATpXa00'},{'title':'BL%u039BNK B%u039BNSH%u03A3%u03A3 - Hyper Object','url':'https://youtu.be/LZSi42gtGMs'},{'title':'Laserdisc Visions - Tingri','url':'https://youtu.be/YQNlPO6kZo8'},{'title':'GOLDEN LIVING ROOM - COMPUTER HEALING','url':'https://youtu.be/56ThvgxSw-w'},{'title':'Chuck Person - Eccojams Vol. 1 | B3','url':'https://youtu.be/awAp5UGpncY'},{'title':'Negative Gemini - Infin Path','url':'https://youtu.be/sfOeHiUWPkE'},{'title':'George Clanton - Dumb','url':'https://youtu.be/20AjpZNopVo'},{'title':'%u732B %u30B7 Corp. - Amano','url':'https://youtu.be/3eD8TCvb1DU'},{'title':'%u60C5%u5831%u30C7%u30B9%u30AFVIRTUAL - %u8857%u3078SAPPORO%u2714%u2714%u2714 SPRING EQUINOX','url':'https://youtu.be/J9pGAK6pjjc'},{'title':'ESPRIT %u7A7A%u60F3: esprit.wav','url':'https://youtu.be/2pApIwI3Nic'},{'title':'Eco Virtual - Clear Skies','url':'https://youtu.be/JATCJE6E_BM'},{'title':'Peace Forever Eternal - S.B.S. (Sleepy Baby Sound)','url':'https://youtu.be/91JrFLFU7sM'},{'title':'FrankJavCee - %uFF33%uFF49%uFF4D%uFF50%uFF53%uFF4F%uFF4E%uFF57%uFF41%uFF56%uFF45 %uFF11%uFF19%uFF19%uFF15','url':'https://youtu.be/EuVTt-M3IXo'},{'title':'t e l e p a t h %u30C6%u30EC%u30D1%u30B7%u30FC%u80FD%u529B%u8005 and %u732B %u30B7 Corp - %u5B87%u5B99%u53CC%u5B50','url':'https://youtu.be/P6RWNqi2Q1Q'},{'title':'VECTOR GRAPHICS - DESTINE','url':'https://youtu.be/xYQrPsyu-1s'},{'title':'YUNG BAE - Bae City Rollaz (w%u200B/%u200B%u0418%u0394%u03A4V%u0418)','url':'https://youtu.be/9WOKk1i_eL8'},{'title':'Flamingosis - Football Head','url':'https://youtu.be/1hJKhiew2O0'},{'title':'Luxury Elite - Marble','url':'https://youtu.be/2JlegbRfTFw'},{'title':'Abelard - %u2606%uFF33%uFF25%uFF29%uFF2E%uFF37%uFF21%uFF36%uFF25%u2606%uFF12%uFF10%uFF10%uFF10%u2606','url':'https://youtu.be/OpsZkMN9tmc'},{'title':'%u6182%u9B31 - Aero','url':'https://youtu.be/quEldWNdEwM'},{'title':'Digital Waves - New Times','url':'https://youtu.be/HWZNjL7nwgU'},{'title':'bl00dwave - %uFF37%uFF41%uFF56%uFF45%uFF53','url':'https://youtu.be/wwzC3lwVz5o'},{'title':'b o d y l i n e - Tilldawn','url':'https://youtu.be/Xs-cf9cT8Fc'},{'title':'ASHITAKA%u30A2%u30B7%u30BF%u30AB - %uFF30 %uFF21 %uFF32 %uFF21 %uFF24 %uFF29 %uFF33 %uFF25 %u2652 %u263C%uFF08%u697D%u5712%uFF09','url':'https://youtu.be/__UY9PeuJG0'},{'title':'Sacred Tapestry - LD%u30FBVHD','url':'https://youtu.be/ZnLAtQqBwX0'},{'title':'New Dreams Ltd. - Muku Grid // Air // Into The Light (Night)','url':'https://youtu.be/glQeHOGH5c8'}]}"></script>
         <!-- SCM Music Player script end -->
+        <div class="MainContainer">
+
+  <div class="ParallaxContainer">
+    // Headlines for the page
+  </div>
+
+  <div class="ContentContainer">
+    <div class="Content">
+      // Put the rest of my page content here
+    </div>
+  </div>
+</div>
 </body>
 <script>
 
