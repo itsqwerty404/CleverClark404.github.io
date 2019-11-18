@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Video Example - Wavesurfer Plugin Video</title>
+
+  <link href="../node_modules/video.js/dist/video-js.min.css" rel="stylesheet">
+  <link href="../dist/css/videojs.wavesurfer.css" rel="stylesheet">
+
+  <script src="../node_modules/video.js/dist/video.min.js"></script>
+  <script src="../node_modules/wavesurfer.js/dist/wavesurfer.min.js"></script>
+
+  <script src="../dist/videojs.wavesurfer.js"></script>
+
+  <script src="safari-workaround.js"></script>
+
+  <style>
+  /* change player background color */
+  #myVideo {
+      background-color: blue;
+  }
+  </style>
+</head>
+<body>
+
+<video id="myVideo" playsinline class="video-js vjs-default-skin"></video>
+
+<script>
+/* eslint-disable */
+var player;
+var options = {
+    controls: true,
+    autoplay: false,
+    fluid: false,
+    loop: false,
+    width: 6000,
+    height: 3000,
+    plugins: {
+        wavesurfer: {
+            src: 'https://www.youtube.com/watch?v=MgIo9ePnBEk',
+            msDisplayMax: 10,
+            debug: true,
+            waveColor: '#336699',
+            progressColor: 'black',
+            cursorColor: 'black',
+            hideScrollbar: true,
+            // disable options below to hide the video playback,
+            // and only show the waveform
+            backend: 'MediaElement',
+            mediaType: 'video'
+        }
+    }
+};
+if (isSafari) {
+    // add start button for safari
+    addStartButton();
+} else {
+    // other browsers
+    createPlayer();
+}
+function createPlayer(event) {
+    if (isSafari) {
+        if (event) {
+            // hide button on safari
+            event.target.style.display = 'none';
+        }
+        updateContext(options);
+    }
+    // create player
+    player = videojs('myVideo', options, function() {
+        // print version information at startup
+        var msg = 'Using video.js '+ videojs.VERSION +
+            ' with videojs-wavesurfer ' +
+            videojs.getPluginVersion('wavesurfer') +
+            ' and wavesurfer.js ' + WaveSurfer.VERSION;
+        videojs.log(msg);
+    });
+    player.on('waveReady', function(event) {
+        console.log('waveform: ready!');
+    });
+    player.on('playbackFinish', function(event) {
+        console.log('playback finished.');
+    });
+    // error handling
+    player.on('error', function(element, error) {
+        console.warn('ERROR:', error);
+    });
+}
+</script>
+
+</body>
+</html>

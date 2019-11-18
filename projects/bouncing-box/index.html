@@ -32,6 +32,7 @@
             font-size: 2.2em;
             line-height: 2;
             font-family: Simsun;
+            font-style: oblique;
             font-weight: 700;
             position: fixed;
             top: 50%;
@@ -45,6 +46,7 @@
         .glitch::before { 
                 display: block;
                 content: 'Have You Met The Chairman?';
+                font-style: oblique;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -58,6 +60,7 @@
                 display: block;
                 content: 'Have You Met The Chairman?';
                 position: absolute;
+                font-style: oblique;
                 top: 0;
                 left: 0;
                 height: 100%;
@@ -112,9 +115,9 @@
 		}
 		
 		p1 {
-		    font-family: MS Gothic;
+		    font-family: Simsun;
 		    font-style: oblique;
-		    color: white;
+		    color: hotpink;
 		    font-size: 100%;
 		    width: 100%;
 		    text-shadow: 2px 2px black;
@@ -122,23 +125,34 @@
 		    user-select: none;
 		}
 		
-		p2 {
-		    font-family: Simsun;
-		    font-size: 5.5em;
-		    font-weight: bolder;
-		    color: white;
-		    padding: 300px;
-		    position: top 25%;
-		    user-select: none;
+		a {
+		    color: red;
 		}
+		
+		table, td {
+          border: 2px solid black;
+          font-family: Arial, serif;
+          background: white;
+        }
 		
 	</style>
 
 </head>
 <body class="board">
     <iframe style="border: 0; width: 250px; height: 250px;" src="https://bandcamp.com/EmbeddedPlayer/album=2913501890/size=large/bgcol=ffffff/linkcol=f171a2/minimal=true/transparent=true/" seamless><a href="http://vektroid.bandcamp.com/album/new-dreams-ltd">New Dreams Ltd. by Laserdisc Visions</a></iframe>
+    
+        <table>
+      <tr>
+        <th>HI-SCORE</th>
+      </tr>
+      <tr>
+        <td>QWERTY4</td>
+        <td>17</td>
+      </tr>
+    </table>
+
     <!-- HTML for the box -->
-	<p1><div class="glitch">Have You Met The Chairman?</div></p1>
+	<div class="glitch"><a href="scoreboard.html"><p1>Have You Met The Chairman?</p1></a></div>
 	
 	<div class="box">0</div>
     
@@ -218,6 +232,7 @@
 			// this executes the handleBoxClick function code every time the box is clicked on
 			box.on('click', handleBoxClick);
 		})();
+		
 		
 		function goBack() {
           window.history.back()
