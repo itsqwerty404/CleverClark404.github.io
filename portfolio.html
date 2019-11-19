@@ -185,6 +185,57 @@
         font-size: 25px;
     }
     
+    .sidepanel  {
+      width: 0;
+      position: fixed;
+      z-index: 2;
+      height: 250px;
+      top: 0;
+      right: 0;
+      color: blue;
+      background-color: blue;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      border-style: 3px inset white
+    }
+    
+    .sidepanel a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      font-family: kyooburBlok;
+      color: #f1f1f1;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    .sidepanel a:hover {
+      color: #818181;
+    }
+    
+    .closebtn {
+      position: absolute;
+      color: white;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+    }
+    
+    .openbtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: inherit;
+      color: inherit;
+      padding: 10px 15px;
+      border: none;
+      font-weight: bolder;
+    }
+    
+    .openbtn:hover {
+      background-color:#444;
+    }
+    
     @font-face {
       font-size: 4em;
       font-family: kyooburBlok;
@@ -301,6 +352,8 @@
       top: 0;
       width: 100%;
       z-index: 2;
+      -webkit-transition: top 1s ease-in-out;
+      transition: top 1s ease-in-out;
     }
     
     .topnav a {
@@ -703,7 +756,7 @@
                     <ul>
                         <button class="dropbtn">
                         <div class="dropdown">
-                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="index.html" >HOME</a></li>
                         </div>
                         </button>
                         <button class="dropbtn">
@@ -734,18 +787,26 @@
                             <li><a href="contactinfo.html">CONTACT INFO</a></li>
                         </div>
                         </button>
-                        <button class="dropbtn">
-                        <i class="fa fa-bars"></i>
+                        <button class="openbtn" onclick="openNav()">
+                            ☰
                         </button>
                         <form>
                             <button type="submit"><i class="fa fa-search"></i></button>
                             <input type="text" name="search" placeholder="Search..">
                         </form>
-                        <a href="https://www.patreon.com/bePatron?u=27118210" data-patreon-widget-type="become-patron-button">Support Our Patreon</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
-                    </ul>
-                    <img src="under-construction.gif" class="undcon">
-                </div>
-           </nav>
+                        </ul>
+                    <img src="under-construction.gif" alt="construct" class="undcon">
+                    </div>
+                    <div id="mySidepanel" class="sidepanel">
+                          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">❌</a>
+                          <div class="kyoobur">
+                          <a href="login.html">login</a>
+                          <a href="notifications.html">notifications</a>
+                          <a href="about-us.html">about us</a>
+                          <a href="https://www.patreon.com/bePatron?u=27118210" data-patreon-widget-type="become-patron-button">Support Our Patreon</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+                        </div>
+                    </div>
+                </nav>
         <div class="all-contents">
                 <div class="header">
                 <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddgm2b7-1bd32a52-31d9-47c1-b49c-698d9f45563f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E0NDM3MjhhLWYzOGUtNDZhYy05OWE1LWEzMmQyNzY0NTc1OVwvZGRnbTJiNy0xYmQzMmE1Mi0zMWQ5LTQ3YzEtYjQ5Yy02OThkOWY0NTU2M2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.41P1rfcbhEjp3CsxngyoDr0Lrg8wk4jOvAVCllEqdEI" alt="LOGO" id="paralogo" title="paralolz.net">
@@ -793,6 +854,48 @@
             <h3>Copyright 2019 | All Rights Reserved | Paralolz Studios, Ltd.</h3>
         </div>
     <script>
+    function openNav() {
+          document.getElementById("mySidepanel").style.width = "265px";
+          document.getElementById("mySidepanel").style.border = "4px solid white";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidepanel").style.width = "0";
+          document.getElementById("mySidepanel").style.border = "none";
+        }
+    
+    //Get the button
+        var mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        
+        var lastScrollTop = 0;
+
+        window.addEventListener("scroll", function(){  
+           var st = window.pageYOffset || document.documentElement.scrollTop;  
+           if (st > lastScrollTop){
+               document.getElementById("myTopnav").style.top = "-100%";
+           } else {
+              document.getElementById("myTopnav").style.top = "0";
+           }
+           lastScrollTop = st;
+        }, false);
+    
     const resolver = {
           resolve: function resolve(options, callback) {
             // The string to resolve

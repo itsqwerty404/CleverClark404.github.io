@@ -175,7 +175,7 @@
             var positionY = 0;
             var directionY = 1;
             var clickGoal = 10;
-            var imgPopup = ("PizzaPyramid.gif");
+            var imgPopup = 'PizzaPyramid.gif';
             box.css('left', position);      // moves the box to the x-coordinate of <position> 
             box.css('top', positionY);
             box.text(points);               // changes the text of the box to display the value of <points>
@@ -223,7 +223,7 @@
                 speed += 1;    // increase the speed of the box on every click
 			    
 			    if(points === clickGoal) {
-			        
+			      console.log(imgPopup);  
 			    }
 			};
 

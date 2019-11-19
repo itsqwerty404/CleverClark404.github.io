@@ -172,6 +172,9 @@
               position: fixed;
               top: 0;
               width: 100%;
+              z-index: 2;
+              -webkit-transition: top 1s ease-in-out;
+              transition: top 1s ease-in-out;
             }
             
             .topnav a {
@@ -208,6 +211,72 @@
             .topnav .icon {
               display: none;
             }
+            
+            @font-face {
+      font-size: 25px;
+      font-family: kyooburBlok;
+      src: url("font-faces/Kyoobur Blok.ttf");
+      font-weight: bold;
+      text-align: center;
+      width: auto;
+      text-decoration: none;
+    }
+    
+    .kyoobur {
+      font-family: kyooburBlok;
+      background: none;
+    }
+    
+    .sidepanel  {
+      width: 0;
+      position: fixed;
+      z-index: 2;
+      height: 250px;
+      top: 0;
+      right: 0;
+      color: blue;
+      background-color: blue;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      border-style: 3px inset white
+    }
+    
+    .sidepanel a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      font-family: kyooburBlok;
+      color: #f1f1f1;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    .sidepanel a:hover {
+      color: #818181;
+    }
+    
+    .closebtn {
+      position: absolute;
+      color: white;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+    }
+    
+    .openbtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: inherit;
+      color: inherit;
+      padding: 10px 15px;
+      border: none;
+      font-weight: bolder;
+    }
+    
+    .openbtn:hover {
+      background-color:#444;
+    }
             
             @media screen and (max-width: 600px) {
               .topnav a:not(:first-child) {display: none;}
@@ -500,12 +569,12 @@
                     <ul>
                         <button class="dropbtn">
                         <div class="dropdown">
-                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="index.html" >HOME</a></li>
                         </div>
                         </button>
                         <button class="dropbtn">
                         <div class="dropdown">
-                            <li><a href="portfolio.html">PORTFOLIO</a></li>
+                            <li><a href="portfolio.html" class="active">PORTFOLIO</a></li>
                         </div>
                         </button>
                         <button class="dropbtn">
@@ -518,12 +587,12 @@
                         </button>
                         <button class="dropbtn">
                         <div class="dropdown">
-                            <li><a href="auvi.html" class="active">AUVI</a></li>
+                            <li><a href="loopslicer-master/auvi.html">AUVI</a></li>
                         </div>
                         </button>
                         <button class="dropbtn">
                         <div class="dropdown">
-                            <li><a href="forumsfaq.html">FORUMS/FAQ's</a></li>
+                            <li><a href="forumsfaq.html">FORUMS AND FAQs</a></li>
                             </div>
                         </button>
                         <button class="dropbtn">
@@ -531,16 +600,25 @@
                             <li><a href="contactinfo.html">CONTACT INFO</a></li>
                         </div>
                         </button>
-                        <button class="dropbtn">
-                        <i class="fa fa-bars"></i>
+                        <button class="openbtn" onclick="openNav()">
+                            ☰
                         </button>
                         <form>
                             <button type="submit"><i class="fa fa-search"></i></button>
                             <input type="text" name="search" placeholder="Search..">
                         </form>
-                    </ul>
-                    <img src="under-construction.gif" class="undcon">
-                </div>
+                        </ul>
+                    <img src="under-construction.gif" alt="construct" class="undcon">
+                    </div>
+                    <div id="mySidepanel" class="sidepanel">
+                          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">❌</a>
+                          <div class="kyoobur">
+                          <a href="login.html">login</a>
+                          <a href="notifications.html">notifications</a>
+                          <a href="about-us.html">about us</a>
+                          <a href="https://www.patreon.com/bePatron?u=27118210" data-patreon-widget-type="become-patron-button">Support Our Patreon</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+                        </div>
+                    </div>
                 </nav>
     <div class="all-contents">
             <div class="img-with-text">
@@ -573,6 +651,8 @@
       </div>
 </body>
 <script>
+
+
 const resolver = {
           resolve: function resolve(options, callback) {
             // The string to resolve
