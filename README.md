@@ -20,25 +20,25 @@ This is my first time making a website, okay?
 
 Just saying. UwU
 
-=============FEATURES=================================
+---------------FEATURES------------------------------------
 
-- HOME -
+-HOME-
     Browse all the latest News, Top! Feature(s), and as
 well as our 'About Paralolz' subsection for any info and/or
 help you may need when/while browsing paralolz.net.
 
 
-- PORTFOLIO -
+-PORTFOLIO-
     A section on paralolz.net where Users
 can select a wide variety of [not so finished] games, maybe.
 
 
-- ART GALLERY -
+-ART GALLERY-
     Users can post, upload, comment on, and
 share their works ranging from 'Literature' to 'Miscellaneous'.
 
 
-- AUVI -
+-AUVI-
     Short for "AUdio VIsualizer", Users can upload and
 download their own music files, all the while editing them for
 some crazy results. 
@@ -48,7 +48,7 @@ the "loopslicer-master" folder in my Github. Hey, at least I'm
 generous enough to give credit. :3
 
 
-- FORUMS & FAQS -
+-FORUMS & FAQS-
 Taking inspiration for popular forum sites such as 4chan, Reddit,
 etc., Users can share their thoughts to the world about whatever
 may be interesting to them.
@@ -57,22 +57,20 @@ may be interesting to them.
     1:02 PM 11/18/2019
 
 
-- CONTACT INFO -
+-CONTACT INFO-
 Users can reach out to the team behind paralolz.net (spoiler, it's
 just me as of typing this, lol).
 
-====================END OF FEATURES=================================
+-------------------END OF FEATURES---------------------------------
 
 That's about it for now.
 
 If you would like to send any feedback about anything you may see
 here, please email me at:
 
---------------------------------------------------------------------
 
-    paralolzltd@gmail.com
+    ----paralolzltd@gmail.com----
     
--------------------------------------------------------------------- 
    
 Thanks Again & Have Fun!
 
