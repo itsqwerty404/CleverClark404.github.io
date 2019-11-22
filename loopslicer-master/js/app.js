@@ -13,12 +13,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		splitChannels: true,
 		height : 120
     };
-
-    wavesurfer.init(options);
-    // Load audio from URL 
-    wavesurfer.load('examples/A10 - 3D Wave.flac');
-
-});
+    
+        wavesurfer.init(options);
+        // Load audio from URL 
+        wavesurfer.load('examples/A10 - 3D Wave.flac');
+    
+    });
 
 wavesurfer.on('ready', function () {
 	wavesurfer.clearRegions();
@@ -47,9 +47,8 @@ wavesurfer.on('ready', function () {
 	wavesurfer.setScale('chromatic');
 	wavesurfer.setNoteNumber(0);
 	wavesurfer.initTiming();
-	wavesurfer.setEstBpm();	
+	wavesurfer.setEstBpm();
 });
-
 
 wavesurfer.on('error', function (err) {
     console.error("wv err:" + err);
