@@ -1,13 +1,14 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
     <head>
     <script data-ad-client="ca-pub-2317430483912572" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
     <link rel="icon" href="paraicon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
     <style> 
     /* Style the header */
     
@@ -64,12 +65,15 @@
     p4  {
         text-align: center;
         color: blue;
+        font-family: Helvetica, serif;
+        font-weight: bold;
+        font-size: 1.3em;
     }
     
     p5  {
         text-align: inherit;
         color: white;
-        font-size: 40px;
+        font-size: 50px;
         font-variant: small-caps;
         font-family: Times, Times New Roman, serif;
         font-weight: bold;
@@ -84,23 +88,14 @@
         font-weight: bold;
     }
     
-    @font-face  {
+    p7  {
         text-align: inherit;
         color: blue;
-        font-family: coolS;
-        src: url("font-faces/CoolS-Regular (1).otf");
-        font-size: 4em;
+        font-size: 40px;
         font-style: oblique;
+        font-variant: small-caps;
+        font-family: "Arial Black", Gadget, sans-serif;
         font-weight: bold;
-    }
-    
-    .coolS {
-        font-family: coolS;
-        font-size: 10em;
-        background-image: url("https://miketaylr.com/pres/html5tx~~~2013/pictures/city.gif");
-        background-position: center;
-        background-size: initial;
-        background-repeat: repeat;
     }
     
     p8  {
@@ -135,9 +130,9 @@
         background-color: none;
         padding: 0;
         font-family: 'Aldrich';
-        font-size: 16px;
+        font-size: 25px;
         text-align: center;
-        margin-top: 100px;
+        margin: 0;
     }
     
     @font-face {
@@ -185,133 +180,20 @@
         font-size: 25px;
     }
     
-    .sidepanel  {
-      width: 0;
-      position: fixed;
-      z-index: 2;
-      height: 250px;
-      top: 0;
-      right: 0;
-      color: blue;
-      background-color: blue;
-      overflow-x: hidden;
-      transition: 0.5s;
-      padding-top: 60px;
-      border-style: 3px inset white
-    }
-    
-    .sidepanel a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 25px;
-      font-family: kyooburBlok;
-      color: #f1f1f1;
-      display: block;
-      transition: 0.3s;
-    }
-    
-    .sidepanel a:hover {
-      color: #818181;
-    }
-    
-    .closebtn {
-      position: absolute;
-      color: white;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-    }
-    
-    .openbtn {
-      font-size: 20px;
-      cursor: pointer;
-      background-color: inherit;
-      color: inherit;
-      padding: 10px 15px;
-      border: none;
-      font-weight: bolder;
-    }
-    
-    .openbtn:hover {
-      background-color:#444;
-    }
-    
-    @font-face {
-      font-size: 4em;
-      font-family: kyooburBlok;
-      src: url("font-faces/Kyoobur Blok.ttf");
-      font-weight: bold;
-      text-align: center;
-      width: auto;
-      text-decoration: none;
-    }
-    
-    .kyoobur {
-      font-family: kyooburBlok;
-      background: none;
+    .para  {
+        text-align: left;
     }
 
-    .marquee {
-     padding: 25px 0;   
-     height: auto;	
-     overflow: hidden;
-     position: relative;
-     background: none;
-     color: white;
-     border: 8px solid grey;
-     background-position: center;
-     background-size: 25%, cover;
-     background-image: url("https://www.xmple.com/wallpaper/graph-paper-grid-white-black-1920x1080-c2-f0f8ff-000000-l2-12-204-a-0-f-20.svg"); /* Standard syntax (must be last)*/
-    }
-    .marquee grad1 {
-     position: relative;
-     width: 100%;
-     height: 100%;
-     margin: 0;
-     line-height: 50px;
-     text-align: center;
-     /* Starting position */
-     -moz-transform:translateX(100%);
-     -webkit-transform:translateX(100%);	
-     transform:translateX(100%);
-     /* Apply animation to this element */	
-     -moz-animation: scroll-left 7s linear infinite;
-     -webkit-animation: scroll-left 7s linear infinite;
-     animation: scroll-left 7s linear infinite;
-    }
-    /* Move it (define the animation) */
-    @-moz-keyframes scroll-left {
-     0%   { -moz-transform: translateX(100%); }
-     100% { -moz-transform: translateX(-100%); }
-    }
-    @-webkit-keyframes scroll-left {
-     0%   { -webkit-transform: translateX(100%); }
-     100% { -webkit-transform: translateX(-100%); }
-    }
-    @keyframes scroll-left {
-     0%   { 
-     -moz-transform: translateX(100%); /* Browser bug fix */
-     -webkit-transform: translateX(100%); /* Browser bug fix */
-     transform: translateX(100%); 		
-     }
-     100% { 
-     -moz-transform: translateX(-100%); /* Browser bug fix */
-     -webkit-transform: translateX(-100%); /* Browser bug fix */
-     transform: translateX(-100%); 
-     }
-    }
-    
     .all-contents {
         margin: 0;
         text-align: center;
         padding: 16px;
-        margin-top: 30px;
+        margin-top: 5%;
         max-width: 100%;
         height: auto;
     }
-    
     html {
-        background-image: url("img-main/citygrid.gif");
+        background: url("https://steamuserimages-a.akamaihd.net/ugc/951857668148675039/DEE6B85887DB25E1C531CC813CE37D2231936DD8/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true") no-repeat center fixed; 
         background-size: cover;
     }
     
@@ -389,6 +271,71 @@
     
     .topnav .icon {
       display: none;
+    }
+    
+    @font-face {
+      font-size: 25px;
+      font-family: kyooburBlok;
+      src: url("font-faces/Kyoobur Blok.ttf");
+      font-weight: bold;
+      text-align: center;
+      width: auto;
+      text-decoration: none;
+    }
+    
+    .kyoobur {
+      font-family: kyooburBlok;
+      background: none;
+    }
+    
+    .sidepanel  {
+      width: 0;
+      position: fixed;
+      z-index: 2;
+      height: 250px;
+      top: 0;
+      right: 0;
+      color: blue;
+      background-color: blue;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+    
+    .sidepanel a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      font-family: kyooburBlok;
+      color: #f1f1f1;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    .sidepanel a:hover {
+      color: #818181;
+    }
+    
+    .closebtn {
+      position: absolute;
+      color: white;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+    }
+    
+    .openbtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: inherit;
+      color: inherit;
+      padding: 0 15px;
+      border: none;
+      font-weight: bolder;
+    }
+    
+    .openbtn:hover {
+      background-color:#444;
     }
     
     @media screen and (max-width: 600px) {
@@ -545,36 +492,6 @@
       box-sizing: border-box;
     }
     
-    .pfbtn {
-        color: white;
-        background: none;
-        list-style-image: inherit;
-        padding: 0;
-    }
-    
-    .pfbtn li {
-        display: inline-block;
-        padding: 0;
-        margin-top: 0;
-    }
-    
-    .pfbtn a {
-        text-decoration: none;
-        color: white;
-        font-family: kyooburBlok;
-        padding: 5px;
-        margin: 30px;
-    }
-    
-    .pfbtn a:hover {
-        -webkit-stroke-width: 5.3px;
-        -webkit-stroke-color: #FFFFFF;
-        -webkit-fill-color: #FFFFFF;
-        text-shadow: 0 10px black;
-        background-color: blue;
-        color: white;
-    }
-    
     /* Create three equal columns that floats next to each other */
     .column {
       float: left;
@@ -589,11 +506,7 @@
     /* Column container */
     .row {  
       display: inline-grid;
-      border: 8px solid grey;
-      background-image: url("https://media1.tenor.com/images/690879a87527cacee4fff90e01c0610e/tenor.gif?itemid=5075317");
-      background-position: center;
-      background-size: cover;
-      background-repeat: repeat;
+      
     }
     
     /* Clear floats after the columns */
@@ -623,6 +536,7 @@
     }
     .menu {
       float: left;
+      background: white;
       border: 7px solid grey;
       color: blue;
       width: 100%;
@@ -682,27 +596,22 @@
         font-size: 2em;
     }
     
-    .grad1 {
-        height: auto;
-        max-width: 100%;
-        text-align: center;
-        font-size: 4em;
-        color: blue;
-        border-style: 8px solid grey; 
-        text-shadow: -5 0 #FF0000, 0 10px #00FF00;
-        background-position: center;
-        background-size: 25%, cover;
-    }
-
-    
     #paralogo {
       -webkit-transition: -webkit-transform 1s ease-in-out;
       -webkit-transition: 1s linear;
       -webkit-transform-style: preserve-3d;
     }
+    
+    /* The animation code */
+    @keyframes example {
+      from {opacity: inherit;}
+      to {opacity: 0.5;}
+    }
         
     #paralogo:hover {
-        -webkit-transform: rotateX(360deg) rotateY(180deg) rotateZ(360deg);
+        animation-name: example;
+        animation-duration: 1s;
+        transition: ease-in-out;
     }
     
     .undcon {
@@ -717,15 +626,8 @@
       transition: all 0.5s ease-in-out;
     }
 
-    ul li {
+    ul {
         list-style: none;
-        font-family: kyooburBlok;
-        font-size: 2em;
-    }
-    
-    ol li {
-        font-family: Times New Roman, serif;
-        font-size: 25px;
     }
     
     * {
@@ -748,20 +650,21 @@
         height: auto;
     }
     </style>
-        <title>PORTFOLIO | paralolz.net</title>
+        <title>HOME | paralolz.net</title>
     </head>
         <body>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">TOP</button>
             <nav>
                 <div class="topnav" id="myTopnav">
                     <ul>
                         <button class="dropbtn">
                         <div class="dropdown">
-                            <li><a href="home.html" >HOME</a></li>
+                            <li><a href="home.html" class="active">HOME</a></li>
                         </div>
                         </button>
                         <button class="dropbtn">
                         <div class="dropdown">
-                            <li><a href="portfolio.html" class="active">PORTFOLIO</a></li>
+                            <li><a href="portfolio.html">PORTFOLIO</a></li>
                         </div>
                         </button>
                         <button class="dropbtn">
@@ -807,54 +710,93 @@
                         </div>
                     </div>
                 </nav>
-        <div class="all-contents">
-                <div class="header">
-                <img src="img-main/paralogo.png" alt="LOGO" id="paralogo" title="paralolz.net">
-                <div class="boomer">
-                <boomer class="heading" data-target-resolver></boomer>
-                </div>
-                <p class="text">
-                <p2>Connect, Create, Communicate™</p2>
-                </p>
-            </div>
-            <main>
+    <div class="all-contents">
+            <button onclick="topFunction()" id="myBtn" title="Go to top">TOP</button>
+                    <div class="header">
+                        <img src="img-main/paralogo.png" alt="LOGO" id="paralogo" title="paralolz.net">
+                        <div class="boomer">
+                        <boomer class="heading" data-target-resolver></boomer>
+                        </div>
+                        <p class="text">
+                        <p2>Connect, Create, Communicate™</p2>
+                        </p>
+                    </div>
                 <div class="row">
-                <div class="marquee">
-            <marquee class="grad1" behavior="scroll" scrollamount="25" direction="left">
-                <div class="kyoobur">
-                    <kyoobur class="grad1">PORTFOLIO</kyoobur>
-                </div>
-            </marquee>
-            </div>
-            </div>
-            <div class="row">
-                <ul id="portfolio">
-                    <div class="coolS">STUFF I WORKED ON:</div>
+                  <div class="column">
+                    <h1>Welcome to ParaLolz.net! :D</h1>
+                    <h2>About ParaLolz</h2>
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddfy9zy-1de1c407-1c4f-48f2-9afe-68971d273eca.png/v1/fill/w_400,h_162,strp/paralolz_studios__ltd__banner_logo_1__by_paralolzltd_art_ddfy9zy-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTYyIiwicGF0aCI6IlwvZlwvYTQ0MzcyOGEtZjM4ZS00NmFjLTk5YTUtYTMyZDI3NjQ1NzU5XC9kZGZ5OXp5LTFkZTFjNDA3LTFjNGYtNDhmMi05YWZlLTY4OTcxZDI3M2VjYS5wbmciLCJ3aWR0aCI6Ijw9NDAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.hgeob0Xtv7n5JtgAdBANg3I7ITigTg8h1S6zkC7x1yo" alt="ParaLolz Studios, Ltd.">
+                        <div class="interests">
+                        <div class="para">
+                            <p7>░▒▓ ＶＡＰＯＲＷＡＶＥ ＡＨＥＡＤ ▓▒░</p7><br>
+                            <p3>At ParaLolz, we ensure & guarantee safety, harmony & unity in the face of adversity by sharing each others' thoughts, opinions, works & creations to the world.<br>
+                            <br>On here, you can choose to create music, play games (*NOTE: Some are still a W.I.P.) in my Portfolio section, as well as view and share art and creations with others either for fun or for criticism.</p3>
+                            <br><p3> Either way, it's YOUR experience. :3</p3>
+                        </div>
+                        <div class="para">
+                        <p3>You can also check out my upcoming webcomic "NeoNexus" in the dedicated <b>NEONEXUS</b> tab below 'ART GALLERY'.<br>
+                        I hope to make this website a place of user-based content, which was, is, and will always be my #1 priority when it comes<br>
+                        to paralolz.net as a website for vaporwave fans, tech-savvy retro enthusiasts, musicians, whoever, whatever!</p3>
+                        </div>
                     <hr>
-                <ol>
-                    <p5>
-                    <li>MUSIC</li>
-                    <li>ALBUM ART/ALBUM SONGS</li>
-                    <li>CONCEPT ART FOR MY WEBCOMIC</li>
-                    <li>VIDEOS</li>
-                    <li>SERVERS</li>
-                    <li>DRAWING & STUFF RELATED TO DRAWING</li>
-                    </p5>
-                </ol>
-                </ul>
+                    <h2>Thank you for choosing to visit ParaLolz.net</h2>
+                    <hr>
+                    <div class="boomer">Enjoy your stay.</div><br>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="column">
+                    <h1>
+                    <p6>TOP!</p6>
+                    <p7>Featured</p7></h1>
+                    <h5><a href="https://youtu.be/vtHIueK8Afk">New Dreams Ltd.</a> by Laserdisc Visions</h5>
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a443728a-f38e-46ac-99a5-a32d27645759/ddghtc0-1dee7b64-08ef-423b-b7e9-559bf368e67d.png/v1/fill/w_400,h_400,strp/aotw__new_dreams_ltd_by_laserdisc_visions_by_paralolzltd_art_ddghtc0-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvYTQ0MzcyOGEtZjM4ZS00NmFjLTk5YTUtYTMyZDI3NjQ1NzU5XC9kZGdodGMwLTFkZWU3YjY0LTA4ZWYtNDIzYi1iN2U5LTU1OWJmMzY4ZTY3ZC5wbmciLCJ3aWR0aCI6Ijw9NDAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.loVTwUQ0g7RNPV0rQMGevalSQTcDk3-DNMSdofoXzZo" alt="New Dreams Ltd.">
+                    <div class="para">
+                    <br><p3>Honestly, what can I say about this album that hasn't already been said before?</p3>
+                    <br><p3>Yes, this IS a precursor to Vektroid's delving into the vaporwave scene.
+                    But, that doesn't necessarily mean that it's automatically considered good by default.</p3><br>
+                    <p4>Firstly, let's talk about the contents within the album.</p4>
+                    </section>
+                    <hr>
+                    <h1>THE CONTENTS</h1>
+                    <p3>We start off with a rather hazy track: "Mind Access".</p3>
+                        <p3>It's actually rather soothing to listen to in the short span of a minute or two. It's a simple sampling repetition of "(JINGLE) Pia Over" by Naofumi Hataya, one of many composers I assume of the game NiGHTS Into Dreams. It's a simple, yet effective way of introducing this odd segahaze vaporwave album.</p3>
+                            <p3>"Malls" then begins to play. This time with a rather intriguing mix of Japanese commercials overlayed by what sounds like something you'd hear in an actual mall. Or in actual 'malls', I guess you would say. Lol.</p3>
+                                <p3>Then comes in "Dual". I like this track a lot, with the only gripe of it being that it's very shortlived. :(</p3>
+                                    <p3>"Idgaf Island", a rather touching tongue-in-cheek name for a track, starts playing. If you haven't already guessed it by now, some of these tracks are rather short and repetitive with seemingly no real addage other than the Jap-comm mix in the background. I guess that would act as a bit of a distraction for the ears if Ramona thought that her tracks weren't good enough already, but, eh. What can you do, anyhow?</p3>
+                            </div>
+                    <div class="column">
+                    <h1>ChronoNEWS</h1>
+                    <h5>Where EveryTime There's Something New</h5>
+                    <img src=https://i.ytimg.com/vi/hirJZ--n9t0/hqdefault.jpg alt="NEWS">
+                    <div class="p3 pos">
+                    <p3>Today's News</p3>
+                    </div>
+                    <p3>Nothing much. Lol.</p3>
+                    </div>
+                    </div>
                 </div>
-        </main>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script id="portfolioScript">$(document).ready(function() {$.getJSON('projects/projects.json').then(function(data) { data.projects.forEach(function(project){ $('#portfolio').append('<li class="pfbtn"><a class="pfbtn" href="projects/' + project.name + '/index.html">' + project.title + ' : ' + project.description + '</a></li>'); }); }); });</script>
+                    <div class="content">
+                    <section class="section">
+                        <header4 class="text">QWERTY4</header4>
+                        <header>Vaporwave Webpunk Artist</header>
+                            <p5>Interests</p5>
+                            <ol>
+                                <li>Web Design</li>
+                                <li>Artistic Storytelling</li>
+                                <li>Retrofuturism & Vaporwave</li>
+                            </ol>
+                    </section>
+                </div>
+            </main>     
         </div>
-    </body>
-    <hr>
-    <!-- Footer -->
+        <!-- Footer -->
+        <hr>
         <div class="footer">
             <h3>Copyright 2019 | All Rights Reserved | Paralolz Studios, Ltd.</h3>
         </div>
-    <script>
-    function openNav() {
+        <script>
+        function openNav() {
           document.getElementById("mySidepanel").style.width = "265px";
           document.getElementById("mySidepanel").style.border = "4px solid white";
         }
@@ -863,8 +805,8 @@
           document.getElementById("mySidepanel").style.width = "0";
           document.getElementById("mySidepanel").style.border = "none";
         }
-    
-    //Get the button
+        
+        //Get the button
         var mybutton = document.getElementById("myBtn");
         
         // When the user scrolls down 20px from the top of the document, show the button
@@ -895,8 +837,8 @@
            }
            lastScrollTop = st;
         }, false);
-    
-    const resolver = {
+        
+        const resolver = {
           resolve: function resolve(options, callback) {
             // The string to resolve
             const resolveString = options.resolveString || options.element.getAttribute('data-target-resolver');
@@ -995,5 +937,6 @@
         }
         
         resolver.resolve(options, callback);
-    </script>
+        </script>
+    </body>
 </html>
