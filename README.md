@@ -1,4 +1,4 @@
-# itsqwerty404.github.io
+# paralolz.net
 
 Hello, World! :D
 
